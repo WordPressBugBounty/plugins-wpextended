@@ -1,0 +1,10 @@
+{
+  "name": "Hide Author Slugs",
+  "description": "",
+  "keywords": [],
+  "help": "Obscures author slugs in URLs to protect usernames and enhance privacy.",
+  "group": "users",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/hide-author-slugs/",
+  "order": 25
+}

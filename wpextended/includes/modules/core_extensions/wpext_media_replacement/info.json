@@ -1,0 +1,16 @@
+{
+  "name": "Media Replace",
+  "description": "",
+  "keywords": [],
+  "help": "Allows you to seamlessly replace an image or file in your Media Library by uploading a new file.",
+  "group": "media",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/media-replace/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 50
+}

@@ -1,0 +1,7 @@
+#wp-admin-bar-wpext_notice a {
+  background: var(--wpe_darkRed) !important;
+}
+
+#wp-admin-bar-wpext_notice a:focus {
+  background: transparent !important;
+}

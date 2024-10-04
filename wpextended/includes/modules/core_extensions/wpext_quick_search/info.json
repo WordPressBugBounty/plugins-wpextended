@@ -1,0 +1,16 @@
+{
+  "name": "Quick Search",
+  "description": "",
+  "keywords": [],
+  "help": "The easy way to navigate around your WordPress website.",
+  "group": "snippets",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/wp-admin-quick-search/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 81
+}

@@ -1,0 +1,299 @@
+.wpext_code_snippet .wpext-addnew {
+    margin-right: 2rem !important;
+    margin-left: 2rem !important;
+    margin-top: 3rem !important;
+}
+
+.CodeMirror.cm-s-material.CodeMirror-wrap {
+    height: 500px;
+}
+
+.wp_brand_sub_header .wp-ext-btn-prim {
+    margin-right: 12px;
+}
+
+.wpext_danger {
+    border-color: red !important;
+}
+
+textarea.snippet-code {
+    background-color: var(--wpe_lightGrey) !important;
+    border: 1px solid #dee2e6 !important;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 20px !important;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+form#wpext-snippets-codes select {
+    max-width: 100%;
+}
+
+.snippets-blocks {
+    display: none
+}
+
+#wpext-snippets-codes-json {
+    display: none;
+}
+
+form#wpext-snippets-codes button.btn-danger {
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px !important;
+    padding: 7px 14px !important;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.wpext_action_switch {
+    float: inline-end !important;
+}
+
+/*Code editor css close here*/
+.wpext_code_snippet_title{
+    display: flex;
+    gap: 8px;
+    
+}
+.wpext_add_snippet_body {
+    width: 100% !important;
+    margin: auto !important;
+}
+label.wpext_module_status {
+    cursor: pointer;
+}
+wpext_code_snippet_body#poststuff{
+    width: 100% !important;
+    margin: auto !important;
+}
+.wpext_code_snippet_title sub{font-size: 14px !important; margin-top: 5px;}
+.wpext_code_snippet_layout .wp-list-table span { color: #000; }
+
+.wpext_code_snippet_layout .wp-list-table tr td .row-actions .edit a {
+    color: var(--wpe_darkBlue) !important;
+}
+
+.wpext_code_snippet_layout .wp-list-table .row-actions .delete a {
+    color: #b32d2e;
+     !important;
+}
+
+.wpext-return-module-wrap.wpext_snippet_action a {
+    text-decoration: auto !important;
+}
+
+.wpext_shaddow {
+    opacity: 0.5 !important;
+}
+
+a.wp-ext-btn-sec:focus {
+    box-shadow: unset !important;
+    outline: unset !important;
+}
+
+.code_teaxarea_box {
+    border-radius: 0.375rem;
+}
+
+textarea#snippet_code_sesc {
+    border-radius: 0.375rem;
+}
+
+#wp-extended-app {
+    padding-right: 35px !important;
+}
+
+.wpext_snippet_steps .radio-container {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+/*Snippet step form */
+.wpext_snippet_steps .radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.wpext_snippet_steps .radio-container input {
+    transform: scale(1.5);
+    opacity: 0 !important;
+}
+
+.wpext_snippet_steps .radio-container {
+    background-color: var(--wpe_white) !important;
+    margin: 25px;
+    text-align: center;
+}
+
+.wpext_snippet_steps .radio-container label {
+    margin-left: -20px !important;
+}
+
+.wpext_snippet_steps .radio-container.active {
+    background-color: #EEF2F7 !important;
+    border-color: var(--wpe_blue) !important;
+    color: var(--wpe_blue) !important;
+}
+
+.wpext_code_snippet_layout .button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.wpext_code_snippet_layout .modal-header,
+.modal-footer {
+    border: unset !important;
+}
+
+.wpext_code_snippet_layout .modal-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#wpext_goto_snippet {
+    box-shadow: unset !important;
+}
+
+.wpext_snippet_steps .btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    color: var(--bs-btn-active-color);
+    color: var(--wpe_blue) !important;
+    border-color: var(--wpe_blue) !important;
+}
+
+.wpext_snippet_title {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: var(--wpe_white);
+    background-color: #EEF2F7;
+    border-color: var(--wpe_blue);
+    color: var(--wpe_blue);
+}
+
+label.wpext_module_status {
+    color: var(--wpe_blue);
+}
+
+.wpext_existing_popup {
+    opacity: 0;
+}
+
+.wpext_code_snippet_body textarea {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.wpext_code_snippet_body .code_teaxarea_box {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.wpext_add_new_mainsection {
+    width: 65%;
+    margin: auto;
+}
+
+.wpext_code_snippet_layout .modal-footer {
+    padding-bottom: 45px;
+    display: inline !important;
+}
+
+.wpext_code_snippet_layout button.btn-close {
+    border: 1px solid var(--wpe_black) !important;
+    border-radius: 100% !important;
+    font-size: 12px;
+    padding: 4px;
+    opacity: 1;
+}
+
+.wpext_snippet_action .wp-ext-btn-sec {
+    padding: 8.5px 14px !important;
+}
+
+.wpext_add_new_mainsection .wrap {
+    margin: 10px 0px 0 0px !important;
+}
+
+.wpext_code_snippet_body .CodeMirror-gutters {
+    background: #EEF2F7;
+}
+
+.wpext_code_snippet_body .snippet_name,
+.wpext_snippet_name {
+    height: 50px;
+    font-size: 14px;
+    padding-top: 10px;
+    border: 1px solid var(--wpe_brightStar);
+}
+
+.wpext_code_snippet_body #snippet_code_sesc {
+    font-size: 14px;
+    padding-top: 10px;
+    padding: 0.5rem 0.75rem;
+}
+
+#liveToast.toast.popup {
+    background-color: var(--wpe_planetarium) !important;
+    color: var(--wpe_white) !important;
+}
+
+.wpext_snippet_position_action {
+    text-align: right !important;
+    justify-content: end !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .wpext_add_new_mainsection {
+        width: 95%;
+        margin: auto;
+    }
+#wp-extended-app {
+  padding-right: 20px !important;
+}
+.wpext_snippet_steps .radio-container {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin: 15px;
+}
+
+
+}
+
+/*Snippet step from closed here*/
+@media screen and (max-width: 391px) {
+    .wpext_success_message_container {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #add_new_snippet {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    .snippet-label {
+        margin-bottom: 10px !important;
+    }
+
+    .btn-delete {
+        margin-top: 10px;
+    }
+}
+
+

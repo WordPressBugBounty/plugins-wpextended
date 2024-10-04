@@ -1,0 +1,16 @@
+{
+  "name": "Quick Image",
+  "description": "",
+  "keywords": [],
+  "help": "Quickly and easily replace featured images in the post/page list",
+  "group": "media",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/quick-image-replace/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 52
+}

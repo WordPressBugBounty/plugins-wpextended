@@ -1,0 +1,16 @@
+{
+  "name": "Debug Mode",
+  "description": "",
+  "keywords": [],
+  "help": "Enable Debug Mode to easily troubleshoot and resolve issues, providing detailed error logs and warnings for developers.",
+  "group": "security",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/debug-mode/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 43
+}

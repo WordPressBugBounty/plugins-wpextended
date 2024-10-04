@@ -1,0 +1,19 @@
+{
+  "name": "Clean Profiles",
+  "description": "",
+  "keywords": [],
+  "help": "Simplifies user profiles in admin area, removing unneeded fields for efficiency.",
+  "group": "users",
+  "path": "wp-extended-user-sections",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/clean-profiles/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "link": "Settings",
+      "configure_text": "Configure",
+      "slug": "wp-extended-user-sections"
+    }
+  ],
+  "order": 24
+}

@@ -1,0 +1,432 @@
+# WP Extended
+# Copyright 2022 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Extended v1.0.0\n"
+"Report-Msgid-Bugs-To: Translation Team <translations@wpextended.io>\n"
+"POT-Creation-Date: 2022-06-05 10:50+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Translation Team <translations@wpextended.io>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-wp-extended-admin.php:182
+msgid "WP Extended Settings"
+msgstr ""
+
+#: admin/class-wp-extended-admin.php:183
+msgid "WP Extended"
+msgstr ""
+
+#: admin/partials/sidebar-info.php:13
+msgid "Licence"
+msgstr ""
+
+#: admin/partials/sidebar-info.php:15
+msgid "Plugin Version"
+msgstr ""
+
+#: admin/partials/sidebar-info.php:17
+msgid "PHP Version"
+msgstr ""
+
+#: admin/partials/sidebar-info.php:19
+msgid "WordPress Version"
+msgstr ""
+
+#: admin/partials/sidebar-info.php:23
+msgid "Check Recommended Settings"
+msgstr ""
+
+#: admin/partials/sidebar-support.php:9
+msgid "Support"
+msgstr ""
+
+#: admin/partials/sidebar-support.php:11
+msgid "Documentation"
+msgstr ""
+
+#: admin/partials/sidebar-support.php:12
+msgid "Facebook Group"
+msgstr ""
+
+#: admin/partials/sidebar-support.php:13
+msgid "Contact Us"
+msgstr ""
+
+#: admin/partials/wp-extend-admin-display.php:39
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:284
+msgid "Status"
+msgstr ""
+
+#: dev/tmp/info.json.php:2
+msgid "Export Posts & Pages"
+msgstr ""
+
+#: dev/tmp/info.json.php:3
+msgid "Export Users"
+msgstr ""
+
+#: dev/tmp/info.json.php:4
+msgid "Duplicate Pages & Posts"
+msgstr ""
+
+#: dev/tmp/info.json.php:5
+msgid "Quick Add Post"
+msgstr ""
+
+#: dev/tmp/info.json.php:6
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:120
+msgid "SMTP Email Setup"
+msgstr ""
+
+#: dev/tmp/info.json.php:7
+msgid "Insert Headers & Footers Snippets"
+msgstr ""
+
+#: dev/tmp/info.json.php:8
+msgid "Insert HTML-JS-CSS code snippets to the page"
+msgstr ""
+
+#: dev/tmp/info.json.php:9
+msgid "Hide Admin Notices"
+msgstr ""
+
+#: dev/tmp/info.json.php:10
+msgid "Disable Gutenberg Editor"
+msgstr ""
+
+#: dev/tmp/info.json.php:11
+msgid ""
+"Disable Gutenberg blocks editor and replace it with simple quicktags editor"
+msgstr ""
+
+#: dev/tmp/info.json.php:12
+msgid "Media Trash"
+msgstr ""
+
+#: dev/tmp/info.json.php:13
+msgid "Enable the Trash facility when deleting media files"
+msgstr ""
+
+#: dev/tmp/info.json.php:14
+msgid "Disable Auto Update"
+msgstr ""
+
+#: dev/tmp/info.json.php:15
+msgid "Disable auto updates for Core WordPress, Themes and Plugins"
+msgstr ""
+
+#: dev/tmp/info.json.php:16
+msgid "Debug Mode"
+msgstr ""
+
+#: dev/tmp/info.json.php:17
+msgid "Turn on Debug Mode for WordPress"
+msgstr ""
+
+#: dev/tmp/info.json.php:18
+msgid "Add Options Page"
+msgstr ""
+
+#: dev/tmp/info.json.php:19
+msgid "Clean Profiles"
+msgstr ""
+
+#: dev/tmp/info.json.php:20
+msgid "Admin Theme"
+msgstr ""
+
+#: includes/libraries/wpext_export/wpext_export.php:64
+msgid "Export to "
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_autoupdate/wpext_autoupdate.php:49
+#: includes/modules/core_extensions/wpext_debug/wpext_debug.php:46
+#: includes/modules/core_extensions/wpext_media_trash/wpext_media_trash.php:76
+#, php-format
+msgid "Looks like %s module was not initialised properly."
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_autoupdate/wpext_autoupdate.php:50
+#: includes/modules/core_extensions/wpext_autoupdate/wpext_autoupdate.php:59
+#: includes/modules/core_extensions/wpext_debug/wpext_debug.php:47
+#: includes/modules/core_extensions/wpext_debug/wpext_debug.php:56
+#: includes/modules/core_extensions/wpext_media_trash/wpext_media_trash.php:77
+#: includes/modules/core_extensions/wpext_media_trash/wpext_media_trash.php:86
+msgid "Please disable and then activate module again."
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_autoupdate/wpext_autoupdate.php:58
+#: includes/modules/core_extensions/wpext_debug/wpext_debug.php:55
+#: includes/modules/core_extensions/wpext_media_trash/wpext_media_trash.php:85
+#, php-format
+msgid ""
+"%s is disabled, even though %s module is active. Maybe configuration file "
+"was edited manually after module activation."
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_duplicator/wpext-duplicator-post.js:25
+#: includes/modules/core_extensions/wpext_duplicator/wpext-duplicator-post.js:39
+#: includes/modules/core_extensions/wpext_duplicator/wpext_duplicator.php:178
+#: includes/modules/core_extensions/wpext_duplicator/wpext_duplicator.php:179
+msgid "Duplicate"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_duplicator/wpext_duplicator.php:83
+msgid "[duplicate]"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_export_posts/wpext_export_posts.php:143
+msgid "Download as"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_export_users/wpext_export_users.php:122
+msgid "Export User"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_export_users/wpext_export_users.php:127
+msgid "Formats"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:45
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:46
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:103
+msgid "Notices"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:102
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:151
+msgid "Admin Notices"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:135
+msgid "Error"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:136
+msgid "Warning"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:137
+msgid "Success"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:138
+msgid "Info"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:139
+msgid "All"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:157
+msgid "Check what notifications should be shown for every role"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:170
+msgid "Role"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_hide_notices/wpext_hide_notices.php:206
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:204
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:185
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:176
+msgid "Save"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_media_trash/wpext_media_trash.php:66
+#, php-format
+msgid "%s module experienced an error:"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_quick_add_post/wpext-quick-add-post.js:21
+msgid "New"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:121
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:187
+msgid "SMTP Email"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:228
+msgid "Send test email"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:231
+msgid "Email address"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:232
+msgid "Send"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:302
+msgid "Active"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:307
+msgid "Disabled"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:316
+msgid "SMTP configuration"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:343
+msgid "Host configuration"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:382
+msgid "Authentication"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:439
+msgid "Security Configuration"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:454
+msgid "none"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:493
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:520
+msgid "Yes"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:504
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:531
+msgid "No"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:547
+msgid "Off"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:558
+msgid "Client commands"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:569
+msgid "+ server responses"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:580
+msgid "+ connection status"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:591
+msgid "Low-level data output, all messages"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:610
+msgid "echo"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:621
+msgid "html"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:632
+msgid "error_log"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:650
+msgid "Not allowed"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:656
+msgid "Email not provided"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:661
+msgid "Email is invalid"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:666
+msgid "WP Extended SMTP plugin test message"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:667
+#, php-format
+msgid "Message sent: %s"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_smtp_email/wpext_smtp_email.php:672
+msgid "Email was not sent"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:39
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:40
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:65
+msgid "Snippets"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:72
+msgid ""
+"Be aware by adding custom code may cause problems if there are errors within "
+"the code snippet."
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:98
+msgid "Snippet Label"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:108
+msgid "Snippet Code"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:135
+msgid "Head"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:142
+msgid "Footer"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:148
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:155
+msgid "Delete"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_snippets/wpext_snippets.php:174
+msgid "Add New Snippet"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:116
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:117
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:136
+msgid "User Sections"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:157
+msgid "Toggle user sections"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:161
+msgid "Manage user sections visibility"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:166
+msgid "Section"
+msgstr ""
+
+#: includes/modules/core_extensions/wpext_user_sections/wpext_user_sections.php:167
+msgid "Visible or hidden"
+msgstr ""

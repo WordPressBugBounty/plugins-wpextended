@@ -1,0 +1,143 @@
+/**
+ * WP Rollback Styles
+ */
+.wpext-content-wrap {
+	max-width: 805px;
+}
+.wpext-content-wrap h1 {
+	padding: 0 0 15px 0;
+}
+.wpext-content-wrap h1 img {
+	width: 40px;
+	position: relative;
+	top: 11px;
+	margin-right: 10px;
+}
+.wpext-content-wrap p {
+	font-size: 18px;
+	margin-top: 10px;
+}
+.wpext-content-wrap p span {
+	font-style: italic;
+	color: var(--wpe_black);
+	font-weight: 600;
+}
+.wpext-versions-wrap {
+	margin: 0 0 30px;
+	padding: 0 0 0 4px;
+}
+.wpext-versions-wrap .wpext-error {
+	max-width: 770px;
+}
+.rollback-form .current-version {
+	text-transform: lowercase;
+	font-size: 12px;
+	font-style: italic;
+	color: var(--wpe_smokeScreen);
+	margin-left: 14px;
+}
+.wpext-selected {
+	font-weight: bold;
+}
+.wpext-rollback-disabled.magnific-popup.button-primary {
+	opacity: 0.6;
+	cursor: default;
+}
+.button-primary {
+	margin-right: 5px !important;
+}
+
+/* List */
+.wpext-version-li {
+	clear: left;
+	padding: 3px;
+	overflow: hidden;
+	width: 800px;
+}
+.wpext-version-li label {
+	float:left;
+	font-size: 14px;
+}
+.wpext-version-li label input {
+	margin-right: 5px;
+}
+
+/* Modal */
+#wpext-modal-confirm .button-primary {
+	margin-right: 5px;
+}
+.wpext-error {
+	background: var(--wpe_white);
+	border-left: 4px solid var(--wpe_kingNacho);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	margin: 20px 0;
+	padding: 1px 12px;
+}
+.wpext-error p {
+	margin: 0.5em 0;
+	padding: 2px;
+}
+.wpext-rollback-intro {
+	 
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 900;
+}
+.wpext-modal-inner {
+    padding-right: 20px;
+}
+.rollback-details td {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.wpext-version-list{
+	width: 800px;
+}
+.wp-extend-rollback-manager .wpext-content-wrap p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+ul.wpext-version-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+ul.wpext-version-list .wpext-version-li {
+    width: 24% !important;
+    border: 1px solid var(--wpe_dulcetPink);
+    vertical-align: super;
+    margin: 2px;
+}
+.dashboard_page_wp-extended-rollback select#wpext_selected_version {
+    max-width: 100% !important;
+}
+.white-popup .container-fluid.wpe_brand_header {
+    margin-top: -30px;
+}
+a[href="admin.php?page=wp-extended-rollback"] {
+        pointer-events: none !important;
+        cursor: default !important;
+        display: none !important;
+    }
+.wp-extend-rollback-manager label.label.label-default {
+    color: var(--wpe_nightlife) !important;
+    font-size: 14px !important;
+}
+.rollback-form .wpe_brand_header {
+    background-image: linear-gradient(261deg,rgba(29,35,39,1) 0%,rgba(34, 113, 177,1) 100%);
+    margin-left: 0px !important; 
+    margin-bottom: 30px;
+}
+
+.border{
+   border-color: var(--wpe_brightStar) !important;
+}
+
+a.wpext-return-module.wp-ext-btn-sec{
+    text-decoration: none;
+    padding: 9px 22px !important;
+}

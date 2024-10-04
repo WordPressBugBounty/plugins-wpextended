@@ -1,0 +1,57 @@
+.wpext_code_snippet .wpext-addnew {
+    margin-right: 2rem !important;
+    margin-left: 2rem !important;
+    margin-top: 3rem !important;
+}
+
+.wp_brand_sub_header .wp-ext-btn-prim{
+    margin-right: 12px;
+}
+
+textarea.snippet-code{
+    background-color: var(--wpe_lightGrey)!important;
+    border: 1px solid var(--wpe_brightStar)!important;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 20px!important;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+
+form#wpext-snippets-codes select{
+    max-width: 100%;
+}
+
+.wpext_old_snippet a.page-title-action.wp-ext-btn-sec {
+    text-decoration: auto;
+    padding: 9px 14px !important;
+}
+
+.snippets-blocks{display:none}
+#wpext-snippets-codes-json {display: none;}
+
+form#wpext-snippets-codes button.btn-danger{
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px!important;
+    padding: 7px 14px!important;
+    border-radius: 6px;
+    text-align: center;
+}
+
+@media screen and (max-width: 391px) {
+    .wpext_success_message_container {
+        margin-left: 10px;        
+    }
+} 
+
+@media screen and (max-width: 767px){
+    #add_new_snippet{
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    .snippet-label {margin-bottom: 10px !important;}
+    .btn-delete {margin-top: 10px;}
+}

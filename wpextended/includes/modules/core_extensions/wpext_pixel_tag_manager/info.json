@@ -1,0 +1,18 @@
+{
+  "name": "Pixel Tag Manager",
+  "description": "",
+  "keywords": [],
+  "group": "snippets",
+  "help": "Easily manage the pixel tags for Google Analytics, Facebook and Pinterest.",
+  "path": "wp-extended-pixel-tag-manager",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/pixel-tag-manager/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-pixel-tag-manager"
+    }
+  ],
+  "order": 14
+}

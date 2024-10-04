@@ -1,0 +1,16 @@
+{
+  "name": "Disable Comments",
+  "description": "",
+  "keywords": [],
+  "help": "Eliminate comment sections from your site, reducing spam and moderating efforts.",
+  "group": "disable",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/disable-comments/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 66
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Disable Video Uploads",
+  "description": "",
+  "keywords": [],
+  "help": "Disabling uploading video files in the media library",
+  "group": "media",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/disable-video-uploads/",
+  "order": 3
+}

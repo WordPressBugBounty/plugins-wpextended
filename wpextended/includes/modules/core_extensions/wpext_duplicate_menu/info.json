@@ -1,0 +1,18 @@
+{
+  "name": "Duplicate Menu",
+  "description": "",
+  "keywords": [],
+  "help": "Seamlessly clone your WordPress Menus in just a couple of clicks.",
+  "group": "snippets",
+  "path": "wp-extended-duplicate-menu",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/duplicate-menu/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-duplicate-menu"
+    }
+  ],
+  "order": 10
+}

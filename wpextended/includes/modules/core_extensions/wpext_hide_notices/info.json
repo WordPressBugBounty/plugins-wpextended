@@ -1,0 +1,16 @@
+{
+  "name": "Hide Admin Notices",
+  "description": "",
+  "keywords": [],
+  "help": "Hide unnecessary admin notices, allowing for a more focused and efficient admin experience.",
+  "group": "security",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/hide-admin-notices/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 45
+}

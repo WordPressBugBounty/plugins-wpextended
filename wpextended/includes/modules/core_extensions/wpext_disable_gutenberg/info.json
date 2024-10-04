@@ -1,0 +1,10 @@
+{
+  "name": "Classic Editor",
+  "description": "",
+  "keywords": [],
+  "help": "Switch back to the classic WordPress editor if preferred, offering a simpler content interface.",
+  "available": true,
+  "group": "disable",
+  "doc_url": "https://wpextended.io/module_resources/classic-editor/",
+  "order": 34
+}

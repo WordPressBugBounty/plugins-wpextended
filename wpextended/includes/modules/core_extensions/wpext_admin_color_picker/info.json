@@ -1,0 +1,16 @@
+{
+  "name": "Admin Customiser",
+  "description": "",
+  "keywords": [],
+  "help": "Update the Admin colours and icons to suit your preferences.",
+  "group": "snippets",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/customise-admin-ui/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 40
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Indexing Notice",
+  "description": "",
+  "keywords": [],
+  "help": "Displays an admin bar notice on the top right corner if the option to discourage search engines from indexing the site is enabled.",
+  "group": "snippets",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/indexing-notice/",
+  "order": 12
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Disable RSS Feeds",
+  "description": "",
+  "keywords": [],
+  "help": "Ideal for websites that don't require syndication or want to keep content exclusive to their platform.",
+  "group": "disable",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/disable-rss-feeds/",
+  "order": 29
+}

@@ -1,0 +1,12 @@
+{
+  "name": "wp-extended",
+  "version": "0.0.0",
+  "scripts": {
+    "scss": "sass --watch admin/scss:admin/css"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}

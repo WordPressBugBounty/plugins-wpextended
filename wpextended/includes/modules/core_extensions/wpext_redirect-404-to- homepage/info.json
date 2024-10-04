@@ -1,0 +1,10 @@
+{
+  "name": "404 to Homepage",
+  "description": "",
+  "keywords": [],
+  "help": "Redirects 404 page errors to homepage, keeping visitors engaged on your site.",
+  "group": "post-page",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/404-to-homepage/",
+  "order": 18
+}

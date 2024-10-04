@@ -1,0 +1,10 @@
+{
+  "name": "Post Type Switcher",
+  "description": "",
+  "keywords": [],
+  "help": "Switch the post type of your content, offering flexibility in organising and repurposing existing posts and pages.",
+  "group": "post-page",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/post-type-switcher/",
+  "order": 22
+}

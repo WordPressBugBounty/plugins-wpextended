@@ -1,0 +1,10 @@
+{
+  "name": "SVG File Upload",
+  "description": "",
+  "keywords": [],
+  "help": "Files can only be uploaded by logged in users",
+  "group": "media",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/svg-file-upload/",
+  "order": 29
+}

@@ -1,0 +1,10 @@
+{
+  "name": "User Enumeration",
+  "description": "",
+  "keywords": [],
+  "help": "Secures against hackers scanning for usernames, blocking user enumeration attempts.",
+  "group": "security",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/disabling-user-enumeration/",
+  "order": 28
+}

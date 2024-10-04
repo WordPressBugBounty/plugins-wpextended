@@ -1,0 +1,16 @@
+{
+  "name": "Disable Blog",
+  "description": "",
+  "keywords": [],
+  "help": "Transform your site into a non-blogging platform by disabling blog-related features.",
+  "group": "disable",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/disable-blog/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 64
+}

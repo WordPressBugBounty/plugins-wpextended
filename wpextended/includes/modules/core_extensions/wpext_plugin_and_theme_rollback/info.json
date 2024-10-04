@@ -1,0 +1,10 @@
+{
+  "name": "Rollback Manager",
+  "description": "",
+  "keywords": [],
+  "help": "Revert to previous versions of any theme or plugin from WordPress.org",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/rollback-manager/",
+  "group": "snippets",
+  "order": 13
+}

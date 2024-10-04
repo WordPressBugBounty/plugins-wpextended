@@ -1,0 +1,29 @@
+.wpe_brand_header_title{font-size: 24px !important;}
+.wpext_container_fluid{background: var(--wpe_white); margin-top: -30px;}
+.wpext_container{padding-top: 10px; padding-bottom: 10px; padding-left: 30px;}
+.wp_brand_sub_header_left{margin: 0px; font-size: 15px; margin-top: 10px; margin-bottom: 10px;}
+.wp_brand_sub_header_back_link{color: var(--wpe_blue) !important; text-decoration: none;}
+.wp_brand_sub_header_back_document{color: var(--wpe_blue) !important; text-decoration: none;}
+.wp_brand_sub_header_left{text-align: left;}
+.wpext_main_container{padding-right: 35px;}
+.wpext_container_tips{padding-right: 35px;}
+.wpext-help-message{border: none;}
+.wpext_body_container{padding-right: 35px;}
+
+form#wp-extended-duplicate-menu-frm .label, p {
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+.wp-extended_page_wp-extended-duplicate-menu .wpext-help-message.p-4.rounded-2 {
+    margin: 21px 0px;
+}
+
+@media screen and (max-width: 782px){
+
+    form#wp-extended-duplicate-menu-frm {
+        padding-top: 12px;
+    }
+    .wp-extended_page_wp-extended-duplicate-menu .wpext-help-message.p-4.rounded-2 {
+     margin: auto; 
+   }
+}

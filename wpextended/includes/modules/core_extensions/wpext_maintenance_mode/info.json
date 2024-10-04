@@ -1,0 +1,17 @@
+{
+  "name": "Maintenance Mode",
+  "description": "",
+  "keywords": [],
+  "help": "Switch your site to Maintenance Mode for updates or changes.",
+  "group": "security",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/maintenance-mode/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-maintenance-mode"
+    }
+  ],
+  "order": 19
+}

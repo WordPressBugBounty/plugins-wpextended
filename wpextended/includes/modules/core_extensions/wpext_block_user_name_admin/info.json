@@ -1,0 +1,10 @@
+{
+  "name": "Block Username",
+  "description": "",
+  "keywords": [],
+  "help": "Prevent use of certain usernames, reducing the risk of targeted attacks ",
+  "group": "security",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/blocking-the-admin-username/",
+  "order": 11
+}

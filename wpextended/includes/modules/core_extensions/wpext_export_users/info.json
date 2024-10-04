@@ -1,0 +1,10 @@
+{
+  "name": "Export Users",
+  "description": "",
+  "keywords": [],
+  "help": "Quickly export user data to CSV, aiding in backups and data portability.",
+  "group": "users",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/export-users/",
+  "order": 25
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Open All External Links in the New Tab",
+  "description": "",
+  "keywords": [],
+  "help": "Automatically open external links in a new tab, improving user navigation and keeping visitors on your site longer.",
+  "group": "post-page",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/open-all-external-links-in-the-new-tab/",
+  "order": 21
+}

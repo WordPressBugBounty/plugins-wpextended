@@ -1,0 +1,16 @@
+{
+  "name": "Admin Columns",
+  "description": "",
+  "keywords": [],
+  "help": "Organise columns for posts, pages, media, comments and users.",
+  "group": "snippets",
+  "available": false,
+  "doc_url": "https://wpextended.io/module_resources/admin-columns/",
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Pro"
+    }
+  ],
+  "order": 39
+}

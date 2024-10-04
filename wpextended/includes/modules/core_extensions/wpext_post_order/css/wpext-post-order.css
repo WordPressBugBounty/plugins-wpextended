@@ -1,0 +1,12 @@
+
+.posts {
+  width: 100% !important;
+}
+
+#the-list .ui-sortable-helper {
+  background: var(--wpe_aria);
+  box-shadow: 2px 2px 5px var(--wpe_dhusarGrey);
+}
+.post-type-post .ui-sortable .ui-sortable-handle,.post-type-page .ui-sortable .ui-sortable-handle{
+  cursor: move !important;
+} 

@@ -1,0 +1,18 @@
+{
+  "name": "Login Attempts",
+  "description": "",
+  "keywords": [],
+  "help": "Prevent brute-force attacks by limiting the number of login attempts.",
+  "group": "security",
+  "path": "wp-extended_login_attempt",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/limit-login-attempts/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended_login_attempt"
+    }
+  ],
+  "order": 18
+}

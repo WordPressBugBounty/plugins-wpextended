@@ -1,0 +1,10 @@
+{
+  "name": "Hide WP version",
+  "description": "",
+  "keywords": [],
+  "help": "Enhance security by hiding the WordPress version number from your site’s source view, thwarting targeted attacks.",
+  "group": "security",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/hide-wp-version/",
+  "order": 16
+}

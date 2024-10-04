@@ -1,0 +1,20 @@
+/*=========== Change Admin url ================== */
+.wpext_change_admin { display: flex; padding: 10px; }
+.wpext_change_admin p { padding-right: 20px; }
+input#change_user,input#change_username:focus { box-shadow: unset !important; }
+.wpext_change_admin input.invalid-name { border: 1px solid var(--wpe_darkRed) !important; }
+.wpext-base .admin_url span { color: var(--wpe_nightlife) !important; font-size: 12px !important; } 
+
+/*=========== Change Admin url End here ================== */
+
+label.fw-normal.wpext_font_size { margin-bottom: 4px;  margin-left: 5px; }
+span.label.label-default { margin-left: 5px; }
+
+@media screen and (max-width: 391px) {
+    .wpext_success_message_container {
+        margin-left: 10px;        
+    }
+    .wpext-help-message{
+        margin-left: 11px;
+    }
+} 

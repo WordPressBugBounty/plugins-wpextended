@@ -1,0 +1,10 @@
+{
+  "name": "Duplicate Pages/Posts",
+  "description": "",
+  "keywords": [],
+  "group": "post-page",
+  "help": "Easily clone pages and posts with a single click, streamlining content creation and saving time on repetitive tasks.",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/duplicate-pages-posts/",
+  "order": 19
+}

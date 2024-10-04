@@ -1,0 +1,18 @@
+{
+  "name": "Hide Admin Bar",
+  "description": "",
+  "keywords": [],
+  "help": "Keep the admin bar hidden for specific user roles or on specific pages.",
+  "group": "disable",
+  "path": "wp-extended-hide-adminbar",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/hide-admin-bar/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-hide-adminbar"
+    }
+  ],
+  "order": 37
+}

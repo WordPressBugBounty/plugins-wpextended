@@ -1,0 +1,18 @@
+{
+  "name": "Custom Login URL",
+  "description": "",
+  "keywords": [],
+  "group": "security",
+  "help": "Customize your login URL to increase security by making it harder for unauthorised access.",
+  "path": "wp-extended-changes-wp-admin-url",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/custom-login-url/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-changes-wp-admin-url"
+    }
+  ],
+  "order": 12
+}

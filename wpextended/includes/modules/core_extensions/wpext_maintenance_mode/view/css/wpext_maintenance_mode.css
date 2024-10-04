@@ -1,0 +1,200 @@
+:before,:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none
+}
+.wpext_maintenance .wpext_header_logo img {
+    margin: auto;
+    margin-top: 0px;
+    object-fit: contain;
+}
+ 
+html {
+	height: 100%;
+	left: 0;
+	margin: 0px !important;
+}
+body {
+	height: 100%;
+	box-sizing: border-box;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+body > #wrapper {
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	display: inline-block
+}
+
+body > .main-container {
+	height: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	transition: all .6s ease-in-out;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	z-index: 0;
+	overflow: hidden;
+	position: initial!important;
+	overflow-y: auto;
+
+}
+body > .main-container:after{
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	position: absolute;
+}
+.wpext_maintenance .center {
+	clear: both;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	max-width: 1020px;
+	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
+	text-align: center
+}
+.wpext-logo-text {
+    padding: 50px 0 30px;
+}
+.wpext_maintenance #wrapper {
+	width: 100%;
+	height: calc(100% - 90px);
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+.wpext_maintenance header {
+	position: relative;
+	display: inline-block;
+	width: 100%
+}
+.wpext_maintenance .site-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wpext_maintenance .site-content .font-center {
+	text-align: center
+}
+.wpext_maintenance .site-content h2.heading {
+	margin-bottom: 5px;
+	font-size: 3.5rem;
+}
+.wpext_maintenance .site-content h2,.site-content h3 {
+	width: 100%;
+	display: block
+}
+.wpext_maintenance .site-content .description h3 {
+	font-size: 28px;
+	font-weight: lighter;
+	text-align: center
+}
+.wpext_maintenance .site-content .description p {
+	font-size: 14px;
+	margin: 0;
+	line-height: normal
+}
+.wpext_maintenance .site-content .description p {
+	margin-bottom: 10px
+}
+.wpext_maintenance .site-content p {
+	font-size: 16px;
+	margin: 0 0 15px;
+	line-height: 24px
+}
+.wpext_maintenance footer {
+	position: relative;
+	top: 0;
+	display: inline-block;
+	width: 100%;
+	margin: 25px 0 20px;
+}
+footer .center {
+	padding: 0
+}
+.wpext_maintenance 
+.wpext_maintenance h1{
+	font-size: 5.4rem !important;
+	font-weight: 800;
+    line-height: 1;
+	 
+}
+.wpext_maintenance h2{
+	 
+	font-size: 2.5rem; 
+	font-weight: 800;
+    line-height: 1;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+ .wpext_maintenance .center {
+		max-width: 1004px
+	}
+}
+
+.wpext_maintenance .wpext-bg-img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.wpext_maintenance .wpext-bg-img img, .wpext-bg-img source{
+	position: absolute;
+	visibility: visible;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+@media screen and (max-width: 767px){
+.wpext_maintenance h1{ font-size: 2.4rem !important; font-weight: 800; line-height: 1; }
+.wpext_maintenance h2{ font-size: 1.5rem !important;  font-weight: 800; line-height: 1; }
+.wpext_maintenance .wpext_header_logo img { width: 160px; height: 160px; }
+.maintinance_description { margin: auto; }
+}
+
+@supports (object-fit: cover){
+	.wpext_maintenance .wpext-bg-img img, .wpext-bg-img source{
+		min-height: 100%;
+		min-width: 100%;
+		object-fit: cover;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+}

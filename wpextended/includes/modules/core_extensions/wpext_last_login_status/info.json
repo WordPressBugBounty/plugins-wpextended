@@ -1,0 +1,10 @@
+{
+  "name": "User Last Login",
+  "description": "",
+  "keywords": [],
+  "help": "Display the last login timestamps of users, monitoring user activity and managing user accounts effectively.",
+  "group": "security",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/user-last-login/",
+  "order": 29
+}

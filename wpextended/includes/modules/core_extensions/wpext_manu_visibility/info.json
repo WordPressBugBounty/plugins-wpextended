@@ -1,0 +1,10 @@
+{
+  "name": "Menu Visibility",
+  "description": "",
+  "keywords": [],
+  "help": "Tailor menu visibility by user role, enhancing navigation and site security.",
+  "group": "users",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/menu-visibility/",
+  "order": 26
+}

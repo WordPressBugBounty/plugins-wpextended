@@ -1,0 +1,19 @@
+{
+  "name": "Menu Editor",
+  "description": "",
+  "keywords": [],
+  "help": "Customise your admin menus, including reordering, hiding, or renaming menu items.",
+  "group": "disable",
+  "path": "wp-extended-tidymenu",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/menu-editor/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "link": "Settings",
+      "configure_text": "Configure",
+      "slug": "wp-extended-tidymenu"
+    }
+  ],
+  "order": 36
+}

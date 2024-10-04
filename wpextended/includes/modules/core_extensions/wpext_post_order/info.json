@@ -1,0 +1,10 @@
+{
+  "name": "Post Type Order",
+  "description": "",
+  "keywords": [],
+  "help": "Customise the order of posts and pages, allowing for precise control over the display of your site's content.",
+  "group": "post-page",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/post-page-order/",
+  "order": 24
+}

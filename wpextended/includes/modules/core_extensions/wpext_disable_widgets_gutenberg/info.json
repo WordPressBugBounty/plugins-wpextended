@@ -1,0 +1,10 @@
+{
+  "name": "Gutenberg Widgets",
+  "description": "",
+  "keywords": [],
+  "help": "Disable the Gutenberg widgets for those who prefer the classic WordPress interface.",
+  "group": "disable",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/gutenberg-widgets/",
+  "order": 35
+}

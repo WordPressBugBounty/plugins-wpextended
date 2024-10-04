@@ -1,0 +1,10 @@
+{
+  "name": "Quick Add Post",
+  "description": "",
+  "keywords": [],
+  "help": "Add new posts quickly from the post edit screen, enhancing productivity and allowing for rapid content updates.",
+  "group": "post-page",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/quick-add-post/",
+  "order": 25
+}

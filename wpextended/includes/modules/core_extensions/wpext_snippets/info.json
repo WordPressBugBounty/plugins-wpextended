@@ -1,0 +1,23 @@
+{
+  "name": "Code Snippets",
+  "description": "",
+  "keywords": [],
+  "help": "Insert PHP, HTML, CSS or JS code snippets to the website header or footer.",
+  "group": "snippets",
+  "available": true,
+  "doc_url": "https://wpextended.io/module_resources/insert-snippets/",
+  "action": [
+    {
+      "type": "text-bg-success",
+      "configure_text": "Configure",
+      "slug": "wp-extended-snippets"
+    }
+  ],
+  "tags": [
+    {
+      "type": "badge rounded-pill text-bg-success is-light",
+      "name": "Beta"
+    }
+  ],
+  "order": 10
+}
