@@ -100,7 +100,7 @@ const WPEXTEND_PERMALINK = 'wpext-external-permalink-url';
     ?>
   <div class="external-permalink-input">
     <input name="<?php echo  esc_attr( 'wpext_external_permalink' ) ; ?>" class="large-text" id="<?php   echo  esc_attr( 'external_permalink' ) ; ?>" 
-     type="text" value="<?php echo  esc_url( get_post_meta( $post->ID, '_links_to', true ) ) ; ?>" placeholder="https://" />
+     type="text" value="<?php echo esc_url( get_post_meta( $post->ID, '_links_to', true ) ) ; ?>" placeholder="https://" />
     <div class="external-permalink-input-description">
       <?php _e('Keep empty to use the default WordPress permalink. External permalink will overide the default slug.',WP_EXTENDED_TEXT_DOMAIN ); ?></div>
     <?php wp_nonce_field( 'wpext_external_permalink_' . $post->ID, 'wpext_external_permalink_nonce', false,  true ); ?>
@@ -164,7 +164,7 @@ const WPEXTEND_PERMALINK = 'wpext-external-permalink-url';
 
     public function wpext_redirect_to_external_permalink()
     {
-        global  $post ;
+        global $post ;
         // If not on/loading the single page/post URL, do nothing
         if ( !is_singular() ) {
             return;
@@ -172,7 +172,7 @@ const WPEXTEND_PERMALINK = 'wpext-external-permalink-url';
         $external_permalink = get_post_meta( $post->ID, '_links_to', true );
         
         if ( !empty($external_permalink) ) {
-            wp_redirect( $external_permalink, 302 );
+             wp_redirect(esc_url($external_permalink), 302);
             // temporary redirect
             exit;
         }

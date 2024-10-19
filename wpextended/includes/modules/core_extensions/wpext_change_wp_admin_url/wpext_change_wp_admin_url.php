@@ -11,7 +11,7 @@ class Wp_Extended_Change_Wp_Admin_Url {
   public function __construct() {
 
    $wp_config = get_option( self::WPEXT_CHANGE_WP_ADMIN_URL);
-   $current_url = sanitize_url($_SERVER['REQUEST_URI']);
+   $current_url =  esc_url_raw( $_SERVER['REQUEST_URI'] );
     if(!empty($wp_config['wpext_login_url'])){
       add_action( 'plugins_loaded', array( $this, 'wpext_plugins_loaded' ), 9999 );
       add_action( 'wp_loaded', array( $this, 'wpext_initialize' ) );

@@ -30,7 +30,9 @@ do_action( "wpext_plugin_top_header" ); ?>
                         <input id="flexSwitchCheckDefault_<?php echo esc_attr($type->name); ?>"
                         name="<?php echo esc_attr(self::WPEXTEND_PERMALINK); ?>[<?php echo esc_attr($type->name); ?>][]"
                         type="checkbox" class="form-check-input"
-                        <?php if (isset($config[$type->name][0]) && $config[$type->name][0] === 'on') { echo 'checked'; } ?> role="switch">
+                        <?php  if (isset($config[$type->name][0]) && sanitize_text_field($config[$type->name][0]) === 'on') { 
+                            echo 'checked'; 
+                        } ?> role="switch">
                       </div>
                     </td>
                   </tr>

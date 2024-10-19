@@ -98,9 +98,9 @@ class Wp_Extended_Export_Users extends Wp_Extended_Export {
           <th scope="row"><?php _e('Formats', WP_EXTENDED_TEXT_DOMAIN); ?></th>
           <td>
             <?php
-            foreach( $actions as $action ) {
-              echo "<p>{$action}</p>";
-            }
+             foreach ($actions as $action) {
+                  echo "<p>" . $action . "</p>"; // Escape action output for safe display 
+              }
             ?>
           </td>
         </tr>
@@ -109,4 +109,4 @@ class Wp_Extended_Export_Users extends Wp_Extended_Export {
     <?php
   } // profile_button
 }
-Wp_Extended_Export_Users::init();
+Wp_Extended_Export_Users::init(); 

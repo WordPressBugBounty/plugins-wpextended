@@ -492,8 +492,11 @@ window.addEventListener('DOMContentLoaded', function () {
     data.append('action', 'wp-extended-module-toggle');
     data.append('module', mod);
     data.append('status', status);
+    // Add the nonce to the FormData
+    data.append('nonce', wpext_extended_obj.ajax_nonce);
     input.disabled = true;
-    fetch(ajaxurl, {
+    // Use the localized ajax_url
+    fetch(wpext_extended_obj.ajax_url, {
       method: 'POST',
       cache: 'no-cache',
       body: data,
@@ -540,7 +543,7 @@ jQuery(document).ready(function () {
     )
       .attr('onclick')
       .match(/'([^']+)'/)[1];
-    
+
     jQuery('.item.list-group-item, .item.grid-group-item').each(function () {
       var checkbox = jQuery(this).find('.form-check-input');
       var itemClassList = jQuery(this).attr('class');
@@ -581,7 +584,7 @@ jQuery(document).ready(function () {
   }
 
   var urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('page') === 'wp-extended') {    
+  if (urlParams.get('page') === 'wp-extended') {
     // Attach the change event listener to the Active Modules checkbox
     jQuery('#wpext_active_modules').change(function () {
       var activeModulesChecked = jQuery(this).is(':checked');
@@ -595,10 +598,10 @@ jQuery(document).ready(function () {
   }
 
   // Delay the visibility toggle when the page reloads
-  setTimeout(function() {
+  setTimeout(function () {
     toggleItemsVisibility();
   }, 100);
-  
+
   jQuery('#wpext_active_modules').on('change', function () {
     var isChecked = this.checked;
     jQuery.ajax({
@@ -612,23 +615,28 @@ jQuery(document).ready(function () {
     });
   });
 });
-
 /*Hide show active module */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // Function to toggle visibility of the container based on checkboxes' state
   function toggleActiveModulesContainer() {
-      var $checkboxes = $('.wpext_toggle_settings .card-footer input[type="checkbox"]');
-      var $activeModulesContainer = $('.wpext_toggle_settings .wpext_active_modules_container');
-      var anyChecked = $checkboxes.is(':checked');
-      if (anyChecked) {
-          $activeModulesContainer.show();
-      } else {
-          $activeModulesContainer.hide();
-      }
+    var $checkboxes = $(
+      '.wpext_toggle_settings .card-footer input[type="checkbox"]',
+    );
+    var $activeModulesContainer = $(
+      '.wpext_toggle_settings .wpext_active_modules_container',
+    );
+    var anyChecked = $checkboxes.is(':checked');
+    if (anyChecked) {
+      $activeModulesContainer.show();
+    } else {
+      $activeModulesContainer.hide();
+    }
   }
-  $('.wpext_toggle_settings .card-footer input[type="checkbox"]').click(function() {
+  $('.wpext_toggle_settings .card-footer input[type="checkbox"]').click(
+    function () {
       toggleActiveModulesContainer();
-  });
+    },
+  );
 
   // Initial call to set the correct visibility based on checkbox states
   toggleActiveModulesContainer();

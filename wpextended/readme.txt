@@ -2,8 +2,8 @@
 Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
-Tested up to: 6.6.1
-Stable tag: 3.0.9
+Tested up to: 6.6.2
+Stable tag: 3.0.10
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,13 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.0.10 - 16 October 2024 =
+* Improvement: Php shortcodes not working with WordPress block builder.
+* Improvement: Php shortcodes not working with Oxygen page builder.
+* Improvement: Post type ordering now works with child elements.
+* Security Fix: Improved code and added nonce in Ajax call also Escaping and sanitising output.
+* Update: Tested with WordPress 6.6.2
 
 = 3.0.9 - 02 September 2024 =
 * Improvement: Hide "Active Modules" until enabled any one module.

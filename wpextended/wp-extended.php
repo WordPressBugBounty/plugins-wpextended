@@ -3,7 +3,7 @@
  * Plugin Name: WPExtended
  * Plugin URI: https://wordpress.org/plugins/wpextended
  * Description: Many of your favourite plugins rolled up into 1 modular plugin making your WordPress faster and easier to manage.
- * Version: 3.0.9
+ * Version: 3.0.10
  * Requires at least: 5.6 
  * Requires PHP:      7.4
  * Author: WP Extended
@@ -27,7 +27,7 @@ if ( in_array( 'wpextended-pro/wp-extended.php', apply_filters( 'active_plugins'
   deactivate_plugins( 'wpextended-pro/wp-extended.php' );
    
 }else{
-  define( 'WP_EXTENDED_VERSION', '3.0.9' );
+  define( 'WP_EXTENDED_VERSION', '3.0.10' );
   define( 'WP_EXTENDED_TEXT_DOMAIN', 'wp-extended' );
   define( 'WP_EXTENDED_PATH', plugin_dir_path( __FILE__ ) );
   define( 'WP_EXTENDED_URL', plugins_url( __FILE__ ) );

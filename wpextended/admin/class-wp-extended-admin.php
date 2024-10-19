@@ -256,18 +256,22 @@ class Wp_Extended_admin extends Wp_Extended {
   /*
    * AJAX endpoint for module activation 
    */
-  public function module_toggle_ajax(){
+  public function module_toggle_ajax() {
+    // Verify the nonce
+    check_ajax_referer('extended_obj', 'nonce');
 
     $module = isset($_POST['module']) ? $_POST['module'] : null;
     $status = isset($_POST['status']) ? (bool) $_POST['status'] : false;
 
-    $result = $this->module_toggle( $module, $status );
+    // Toggle the module
+    $result = $this->module_toggle($module, $status);
     
-    wp_send_json( $result );
+    wp_send_json($result);
 
     wp_die();
+ }
 
-  } // module_toggle_ajax
+ // module_toggle_ajax
   /**
    * Activate single module
    */
@@ -901,6 +905,7 @@ public function wpext_show_plugin_menu(){
   }
 
   public function wpext_active_modules_callback(){
+    check_ajax_referer('extended_obj', 'nonce');
     $module_action = sanitize_text_field($_REQUEST['status']);
     if(isset($module_action)){
       update_option('wpext_active_modules_status',$module_action);
