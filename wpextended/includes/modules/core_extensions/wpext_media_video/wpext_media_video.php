@@ -9,7 +9,7 @@ class Wp_Extended_Disable_Video_Uploading extends Wp_Extended_Export {
   public function __construct() {
     parent::__construct();
     // Prohibition of video file uploads
-    add_filter( 'upload_mimes', array( $this, 'vid_mime_types' ) );
+    add_filter( 'upload_mimes', array( $this, 'wpext_vid_mime_types' ) );
   }
 
   public static function init() {
@@ -25,7 +25,7 @@ class Wp_Extended_Disable_Video_Uploading extends Wp_Extended_Export {
    * @param array $mimes Existing MIME types.
    * @return array Filtered MIME types.
    */
-  public function vid_mime_types( $mimes ) {
+  public function wpext_vid_mime_types( $mimes ) {
     // Filter out video MIME types
     $mimes = array_filter(
       $mimes,

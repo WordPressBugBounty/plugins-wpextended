@@ -3,7 +3,7 @@
  * Plugin Name: WPExtended
  * Plugin URI: https://wordpress.org/plugins/wpextended
  * Description: Many of your favourite plugins rolled up into 1 modular plugin making your WordPress faster and easier to manage.
- * Version: 3.0.10
+ * Version: 3.0.11
  * Requires at least: 5.6 
  * Requires PHP:      7.4
  * Author: WP Extended
@@ -27,7 +27,7 @@ if ( in_array( 'wpextended-pro/wp-extended.php', apply_filters( 'active_plugins'
   deactivate_plugins( 'wpextended-pro/wp-extended.php' );
    
 }else{
-  define( 'WP_EXTENDED_VERSION', '3.0.10' );
+  define( 'WP_EXTENDED_VERSION', '3.0.11' );
   define( 'WP_EXTENDED_TEXT_DOMAIN', 'wp-extended' );
   define( 'WP_EXTENDED_PATH', plugin_dir_path( __FILE__ ) );
   define( 'WP_EXTENDED_URL', plugins_url( __FILE__ ) );
@@ -41,8 +41,8 @@ if ( in_array( 'wpextended-pro/wp-extended.php', apply_filters( 'active_plugins'
   define('WP_EXTENDED_SITE_URL', $site_url);
   define('WP_EXTENDED_STORE_URL', 'https://wpextended.io/');  
   define('WP_EXTENDED_ITEM_ID', 548);  
-  require_once plugin_dir_path( __FILE__ ) . "/class-wp-extended.php";
-  require_once plugin_dir_path( __FILE__ ) . "/admin/class-wp-extended-admin.php";
+  require_once plugin_dir_path( __FILE__ ) . "class-wp-extended.php";
+  require_once plugin_dir_path( __FILE__ ) . "admin/class-wp-extended-admin.php";
 
   
   /**
@@ -54,9 +54,9 @@ if ( in_array( 'wpextended-pro/wp-extended.php', apply_filters( 'active_plugins'
    */
 
     $option = get_option('wp-extended-modules', array());
-    $check_file = WP_EXTENDED_PATH . "/includes/modules/core_extensions/wpext_change_wp_admin_url/";
+    $check_file = WP_EXTENDED_PATH . "includes/modules/core_extensions/wpext_change_wp_admin_url/";
     if(isset($option['wpext_change_wp_admin_url']) && $option['wpext_change_wp_admin_url'] == 1 && file_exists($check_file)){
-      require_once plugin_dir_path( __FILE__ ) . "/includes/modules/core_extensions/wpext_change_wp_admin_url/wpext_change_wp_admin_url.php";
+      require_once plugin_dir_path( __FILE__ ) . "includes/modules/core_extensions/wpext_change_wp_admin_url/wpext_change_wp_admin_url.php";
     } 
 
   add_action( 'init', 'wp_extended_load_libraries', 1 );

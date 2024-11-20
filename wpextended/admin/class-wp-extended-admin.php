@@ -463,6 +463,7 @@ class Wp_Extended_admin extends Wp_Extended {
 
   /* Storing action for reset data via ajax*/
   public function wpext_reset_plugin_settings() {
+    check_ajax_referer('extended_obj', 'nonce');
     $status = sanitize_text_field($_POST['status']);
     $response = array();
     if (!empty($status)) {
@@ -484,6 +485,7 @@ class Wp_Extended_admin extends Wp_Extended {
 
 
 public function wpext_show_plugin_menu(){
+    check_ajax_referer('extended_obj', 'nonce');
     $status = sanitize_text_field($_POST['status']);
     $response = array();
     if (!empty($status)) {
@@ -536,6 +538,7 @@ public function wpext_show_plugin_menu(){
   }
 
   public function wpext_admin_menu_favorite_callback(){
+    check_ajax_referer('extended_obj', 'nonce');
     $status = sanitize_text_field($_POST['status']);
     $dataSlug = sanitize_text_field($_POST['dataSlug']);
     $dataName = sanitize_text_field($_POST['dataName']);

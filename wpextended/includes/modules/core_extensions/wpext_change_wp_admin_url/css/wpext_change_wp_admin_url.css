@@ -18,3 +18,9 @@ span.label.label-default { margin-left: 5px; }
         margin-left: 11px;
     }
 } 
+
+@media screen and (max-width: 767px) {
+    .container.wpext-container .wpext-help-message {
+      margin-left: 10px;
+    }
+}

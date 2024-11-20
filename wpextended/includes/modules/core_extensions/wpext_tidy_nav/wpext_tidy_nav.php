@@ -294,7 +294,14 @@ public static function settings_tidy_menu(){
                   $currentuser = wp_get_current_user();
                 
                   $selected_order = get_option('wpext_user_role_selected_order'.$get_user_role);
-                  $selected_order_json = json_decode($selected_order); ?>
+                  
+                  if (is_string($selected_order)) {
+                  	$selected_order_json = json_decode($selected_order, true);
+                  } else {
+                  	// Handle the case where $selected_order is already an array or another type
+                  	$selected_order_json = $selected_order; // or whatever is appropriate for your use case
+                  }
+                  ?>
                   <div id="tbody">
                     <?php 
                       if(!empty($selected_order_json)){  
@@ -931,4 +938,4 @@ public function render_custom_menu_order($menu_order){
   return $data;
   }
 }
-Wp_Extended_Tidy_Nav::init();  
+Wp_Extended_Tidy_Nav::init();

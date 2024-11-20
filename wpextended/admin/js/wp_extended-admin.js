@@ -538,12 +538,17 @@ jQuery(document).ready(function () {
   // Function to toggle visibility of .item.list-group-item and .item.grid-group-item based on the reset all checkbox state
   function toggleItemsVisibility() {
     var activeModulesChecked = jQuery('#wpext_active_modules').is(':checked');
-    var activeModuleSlug = jQuery(
-      '#wp-extended-app .wpext_tab .tablinks.active',
-    )
-      .attr('onclick')
-      .match(/'([^']+)'/)[1];
-
+    var url = new URL(window.location.href);
+    
+    // Get the 'page' parameter from the URL
+    var page = url.searchParams.get("page");
+    if( page == 'wp-extended'){
+      var activeModuleSlug = jQuery(
+        '#wp-extended-app .wpext_tab .tablinks.active',
+      )
+        .attr('onclick')
+        .match(/'([^']+)'/)[1];
+    }
     jQuery('.item.list-group-item, .item.grid-group-item').each(function () {
       var checkbox = jQuery(this).find('.form-check-input');
       var itemClassList = jQuery(this).attr('class');
@@ -610,6 +615,7 @@ jQuery(document).ready(function () {
       data: {
         action: 'wpext_active_modules',
         status: isChecked ? 'true' : 'false',
+        nonce: wpext_extended_obj.ajax_nonce,
       },
       success: function (response) {},
     });

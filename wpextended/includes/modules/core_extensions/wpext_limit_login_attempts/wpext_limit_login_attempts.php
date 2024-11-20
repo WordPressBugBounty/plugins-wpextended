@@ -64,7 +64,7 @@ class Wp_Extended_Login_Attempts extends Wp_Extended {
   public static function wpext_login_attempt_scripts(){
     $screen = get_current_screen();
     if( $screen->base == "wp-extended_page_wp-extended_login_attempt" || $screen->base == "admin_page_wp-extended_login_attempt") {
-        wp_enqueue_script( 'wpext_limit_login_attempts', plugin_dir_url( __FILE__ ) . "/js/wpext_limit_login_attempts.js", array(), WP_EXTENDED_VERSION );   
+        wp_enqueue_script( 'wpext_limit_login_attempts', plugin_dir_url( __FILE__ ) . "js/wpext_limit_login_attempts.js", array(), WP_EXTENDED_VERSION );   
         $unblock_userip  = array(
           'ajax_url' => admin_url( 'admin-ajax.php' ),
           'ajax_nonce' => wp_create_nonce( 'block-tag' ), );
@@ -78,7 +78,7 @@ class Wp_Extended_Login_Attempts extends Wp_Extended {
   }
   public static function wpext_login_settings(){
     register_setting( self::USER_LOGIN_ATTEMPT, self::USER_LOGIN_ATTEMPT,  array( 'type' => 'array' ) );
-    require_once plugin_dir_path( __FILE__ ) . "/wpext_login_limit_sql.php";
+    require_once plugin_dir_path( __FILE__ ) . "wpext_login_limit_sql.php";
   }
   public function wpext_login_failed( $username ) {
       global $wpdb;

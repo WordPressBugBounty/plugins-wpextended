@@ -43,9 +43,9 @@ class Wp_Extended_Snippets extends Custom_List_Table {
             'wp-extended_page_wp-extended-snippets'
         ])) {
             wp_enqueue_style('wpext_snippets_css', plugin_dir_url(__FILE__) . "css/wpext_snippets.css", array());
-            wp_enqueue_script('snippet-action', plugin_dir_url(__FILE__) . '/js/wpext-snippets.js', array('jquery'), false, true);
-            wp_enqueue_script('snippet-css-hints', plugin_dir_url(__FILE__) . '/js/csslint.js', array('jquery'), false, true);
-            wp_enqueue_script('snippet-js-hints', plugin_dir_url(__FILE__) . '/js/jshint.js', array('jquery'), false, true);
+            wp_enqueue_script('snippet-action', plugin_dir_url(__FILE__) . 'js/wpext-snippets.js', array('jquery'), false, true);
+            wp_enqueue_script('snippet-css-hints', plugin_dir_url(__FILE__) . 'js/csslint.js', array('jquery'), false, true);
+            wp_enqueue_script('snippet-js-hints', plugin_dir_url(__FILE__) . 'js/jshint.js', array('jquery'), false, true);
             $ajax_nonce = wp_create_nonce('update_snippet_status');
             $ajax_url = admin_url('admin-ajax.php');
             wp_localize_script('snippet-action', 'wp_ajax_object', array('ajax_url' => $ajax_url, 'ajax_nonce' => $ajax_nonce));
@@ -83,6 +83,8 @@ class Wp_Extended_Snippets extends Custom_List_Table {
             'supports' => array('title', 'editor'),
             'menu_position' => 100,
             'rewrite' => false,
+            'map_meta_cap' => true,
+            'publicly_queryable' => false
         ));
     }
 

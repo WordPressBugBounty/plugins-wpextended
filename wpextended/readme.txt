@@ -2,8 +2,8 @@
 Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
-Tested up to: 6.6.2
-Stable tag: 3.0.10
+Tested up to: 6.7
+Stable tag: 3.0.11
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,11 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.0.11 - 20 November 2024 =
+* Improvement: Fixed design issues with the rollback button.
+* Security Fix: Fixed a security issue by adding a nonce to the JavaScript file for actions triggered after clicking "Active Modules."
+* Tested: Compatibility tested with WordPress Version 6.7
 
 = 3.0.10 - 16 October 2024 =
 * Improvement: Php shortcodes not working with WordPress block builder.

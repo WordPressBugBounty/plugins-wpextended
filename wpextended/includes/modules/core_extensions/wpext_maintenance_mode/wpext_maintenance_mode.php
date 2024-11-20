@@ -153,10 +153,12 @@ public static function settings_admin_maintenance_mode(){
                     <div class="col-lg-9">
                        <div class="row">
                           <div class="col-lg-6">
-                             <input type="text" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[site_heading]" class="form-control mb-3 input_maintenance_mode_fields" id="site_heading" 
-                             placeholder="Example input placeholder" value="<?php if(isset($mentinance_record['site_heading'])) { echo $mentinance_record['site_heading']; } ?>" required>
-                             <input type="text" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[headline_color]" class="form-control wp-color-picker" 
-                                id="headline_color" value="<?php if(isset($mentinance_record['headline_color']) && !empty($mentinance_record['headline_color'])) { echo $mentinance_record['headline_color']; } else{ echo "#000000"; } ?>" title="Choose your color" data-default-color="#000000"/>
+                              <input type="text" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[site_heading]" class="form-control mb-3 input_maintenance_mode_fields" id="site_heading" 
+                                    placeholder="<?php esc_attr_e('Example input placeholder', WP_EXTENDED_TEXT_DOMAIN); ?>" 
+                                    value="<?php echo isset($mentinance_record['site_heading']) ? esc_attr($mentinance_record['site_heading']) : ''; ?>" required>
+                              <input type="text" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[headline_color]" class="form-control wp-color-picker" 
+                                    id="headline_color" value="<?php echo isset($mentinance_record['headline_color']) && !empty($mentinance_record['headline_color']) ? esc_attr($mentinance_record['headline_color']) : '#000000'; ?>" 
+                                    title="<?php esc_attr_e('Choose your color', WP_EXTENDED_TEXT_DOMAIN); ?>" data-default-color="#000000" />
                           </div>
                        </div>                     
                     </div>
@@ -169,10 +171,11 @@ public static function settings_admin_maintenance_mode(){
                     <div class="col-lg-9">
                        <div class="row">
                           <div class="col-lg-6">
-                              <?php $mentinance_record = get_option( self::WPEXT_MAINTANAMCE_MODE ); ?>
-                            <textarea name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[discription]" rows="3" cols="3" class="form-control mb-3 input_maintenance_mode_fields" id="wpext-maintanance_mode_discription"><?php if(!empty($mentinance_record['discription'])) { echo $mentinance_record['discription']; } ?></textarea>
-                             <input type="text" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[description_color]" class="form-control wp-color-picker" 
-                                id="description_color" value="<?php if(isset($mentinance_record['description_color']) && !empty($mentinance_record['description_color']) ) { echo $mentinance_record['description_color']; } else{ echo "#000000"; } ?>" title="Choose your color" data-default-color="#000000"/>
+                              <?php $mentinance_record = get_option(self::WPEXT_MAINTANAMCE_MODE); ?>
+                              <textarea name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[discription]" rows="3" cols="3" class="form-control mb-3 input_maintenance_mode_fields" id="wpext-maintanance_mode_discription"><?php echo !empty($mentinance_record['discription']) ? esc_textarea($mentinance_record['discription']) : ''; ?></textarea>
+                              <input type="text" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[description_color]" class="form-control wp-color-picker" 
+                                    id="description_color" value="<?php echo isset($mentinance_record['description_color']) && !empty($mentinance_record['description_color']) ? esc_attr($mentinance_record['description_color']) : '#000000'; ?>" 
+                                    title="<?php esc_attr_e('Choose your color', WP_EXTENDED_TEXT_DOMAIN); ?>" data-default-color="#000000" />
                           </div>
                        </div>                     
                     </div>
@@ -186,9 +189,20 @@ public static function settings_admin_maintenance_mode(){
                     <div class="col-lg-9">
                        <div class="row">
                           <div class="col-lg-6">
-                             <input type="text" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[footer_text]" class="form-control mb-3 input_maintenance_mode_fields" id="footer_text" value="<?php if(isset($mentinance_record['footer_text'])) { echo $mentinance_record['footer_text']; } ?>" placeholder="<?php _e('Footer Text', WP_EXTENDED_TEXT_DOMAIN);?>"/> 
-                             <input type="text" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[footer_text_color]" class="form-control wp-color-picker" 
-                             id="footer_text_color" value="<?php if(isset($mentinance_record['footer_text_color']) && !empty($mentinance_record['footer_text_color'])) { echo $mentinance_record['footer_text_color']; } else{ echo "#000000"; } ?>" title="Choose your color" data-default-color="#000000"/>
+                             <input type="text" 
+                                  name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[footer_text]" 
+                                  class="form-control mb-3 input_maintenance_mode_fields" 
+                                  id="footer_text" 
+                                  value="<?php echo isset($mentinance_record['footer_text']) ? esc_attr($mentinance_record['footer_text']) : ''; ?>" 
+                                  placeholder="<?php esc_attr_e('Footer Text', WP_EXTENDED_TEXT_DOMAIN); ?>" /> 
+                            
+                            <input type="text" 
+                                  name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[footer_text_color]" 
+                                  class="form-control wp-color-picker" 
+                                  id="footer_text_color" 
+                                  value="<?php echo isset($mentinance_record['footer_text_color']) && !empty($mentinance_record['footer_text_color']) ? esc_attr($mentinance_record['footer_text_color']) : '#000000'; ?>" 
+                                  title="<?php esc_attr_e('Choose your color', WP_EXTENDED_TEXT_DOMAIN); ?>" 
+                                  data-default-color="#000000" />
                           </div>
                        </div>                     
                     </div>
@@ -215,9 +229,11 @@ public static function settings_admin_maintenance_mode(){
                                   <div class="wpe_upload_img_field">
                                     <div class="image img-container-maintenance wp-picker-container-maintenance">
                                         <div class="wpext_admin_logo_picker_maintenance">
-                                        <input type="hidden" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[header_logo]" value="<?php if(isset($mentinance_record['header_logo']) ) { echo $mentinance_record['header_logo']; } ?>" class="header_logo-maintenance">                 
+                                          <input type="hidden" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[header_logo]" 
+                                                value="<?php echo isset($mentinance_record['header_logo']) ? esc_url($mentinance_record['header_logo']) : ''; ?>" 
+                                                class="header_logo-maintenance">                 
                                           <button type="button" class="button wp-color-result upload_logo_img px-0">
-                                            <span class="wp-color-result-text">Select Image</span>
+                                              <span class="wp-color-result-text"><?php esc_html_e('Select Image', WP_EXTENDED_TEXT_DOMAIN); ?></span>
                                           </button>
                                           <div class="wpext_coming_logo_img rounded float-left"></div>
                                         </div>
@@ -237,7 +253,7 @@ public static function settings_admin_maintenance_mode(){
                     <div class="col-lg-9">
                       <div class="row">
                         <div class="col-lg-6"> 
-                          <input type="number" class="form-control mb-3 input_maintenance_mode_fields" id="width_in_px" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[logo_width]" placeholder="Width (px)" value="<?php if(isset($mentinance_record['logo_width'])) { echo $mentinance_record['logo_width']; } ?>">
+                          <input type="number" class="form-control mb-3 input_maintenance_mode_fields" id="width_in_px" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[logo_width]" placeholder="<?php esc_attr_e('Width (px)', WP_EXTENDED_TEXT_DOMAIN); ?>" value="<?php echo isset($mentinance_record['logo_width']) ? esc_attr($mentinance_record['logo_width']) : ''; ?>">
                         </div>                     
                       </div>
                     </div>
@@ -250,7 +266,7 @@ public static function settings_admin_maintenance_mode(){
                     <div class="col-lg-9">
                       <div class="row">
                         <div class="col-lg-6"> 
-                          <input type="number" class="form-control mb-3 input_maintenance_mode_fields" id="height_in_px" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[logo_height]" placeholder="Height (px)" value="<?php if(isset($mentinance_record['logo_height'])) { echo $mentinance_record['logo_height']; } ?>">
+                          <input type="number" class="form-control mb-3 input_maintenance_mode_fields" id="height_in_px" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[logo_height]" placeholder="<?php esc_attr_e('Height (px)', WP_EXTENDED_TEXT_DOMAIN); ?>" value="<?php echo isset($mentinance_record['logo_height']) ? esc_attr($mentinance_record['logo_height']) : ''; ?>">
                         </div>
                       </div>
                     </div> 
@@ -277,10 +293,12 @@ public static function settings_admin_maintenance_mode(){
                                   <div class="wpe_upload_img_field">
                                     <div class="image img-container-maintenance wp-picker-container-maintenance">
                                       <div class="wpext_admin_logo_picker_maintenance">
-                                        <input type="hidden" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[coming_img]" value="<?php if(isset($mentinance_record['coming_img'])) { echo $mentinance_record['coming_img']; } ?>" class="coming_img">
+                                          <input type="hidden" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[coming_img]" 
+                                                value="<?php echo isset($mentinance_record['coming_img']) ? esc_url($mentinance_record['coming_img']) : ''; ?>" 
+                                                class="coming_img">
                                           <button type="button" class="button wp-color-result upload_banner_img px-0">
-                                            <span class="wp-color-result-text">Select Image</span>
-                                          </button>                
+                                            <span class="wp-color-result-text"><?php esc_html_e('Select Image', WP_EXTENDED_TEXT_DOMAIN); ?></span>
+                                          </button>    
                                         <div class="rounded float-left wpext_coming_soon_img"></div>
                                       </div>
                                     </div>
@@ -289,8 +307,10 @@ public static function settings_admin_maintenance_mode(){
                              </div>
 
                              <div class="maintinance_bg <?php if($selected_bg == 'wpext_bgimg') { echo 'd-none'; }?>">   
-                              <input title="Choose your color" id="bg_color_code" class="form-control wp-color-picker" name="<?php echo self::WPEXT_MAINTANAMCE_MODE ?>[bg_color_code]" type="text" value="<?php if(isset($mentinance_record['bg_color_code']) && !empty($mentinance_record['bg_color_code'])) { echo $mentinance_record['bg_color_code']; } else{ echo "#ffffff"; } ?>" title="Choose your color" id="wpext_bgcolor" data-default-color="#ffffff"/>   
-                              </div>
+                              <input title="<?php esc_attr_e('Choose your color', WP_EXTENDED_TEXT_DOMAIN); ?>" id="bg_color_code" class="form-control wp-color-picker" name="<?php echo esc_attr(self::WPEXT_MAINTANAMCE_MODE); ?>[bg_color_code]" type="text" 
+                                value="<?php echo isset($mentinance_record['bg_color_code']) && !empty($mentinance_record['bg_color_code']) ? esc_attr($mentinance_record['bg_color_code']) : '#ffffff'; ?>" 
+                                data-default-color="#ffffff" />  
+                            </div>
                           </div>
                        </div>                     
                     </div>
