@@ -138,7 +138,8 @@ jQuery(document).ready(function($) {
                 action: "save_table_order",
                 order: order,
                 user_role:userrole,
-                role_menu_order: role_menu_order
+                role_menu_order: role_menu_order,
+                security: role_ajax_obj.ajax_nonce,
             },
             success: function(response) {
                 console.log("Table order saved successfully.");
@@ -161,7 +162,8 @@ jQuery(document).ready(function($) {
                 url: role_ajax_obj.ajax_url,
                 data: {
                     action: "wpext_remove_role_order",
-                    current_role: current_role
+                    current_role: current_role,
+                    nonce: role_ajax_obj.ajax_nonce
                 },
                 success: function(response) {
                     jQuery('#by_user_role').change();

@@ -53,6 +53,7 @@ class Wp_Extended_Export_Users extends Wp_Extended_Export {
   } // get_items
   public function download_user_ajax(){
     check_ajax_referer('wpext-ajax-nonce', 'wpext_nonce');
+    
     if (!current_user_can('export')) {
         wp_send_json_error(__('You do not have permission to export users.', WP_EXTENDED_TEXT_DOMAIN));
         wp_die();

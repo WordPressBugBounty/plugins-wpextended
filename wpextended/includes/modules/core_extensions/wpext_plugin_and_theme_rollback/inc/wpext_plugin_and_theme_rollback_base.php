@@ -15,6 +15,7 @@ if($screen->id == 'themes'){
   * Object name: 'wpext_vars'
   * Variables: 'ajaxurl', 'nonce', 'text_rollback_label', 'text_not_rollbackable', 'text_loading_rollback'
   */
+ 
   wp_localize_script(
     'wpext_rollback_themes_script', 'wpext_vars', array(
       'ajaxurl'               => admin_url(),

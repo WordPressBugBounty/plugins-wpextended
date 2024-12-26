@@ -421,7 +421,7 @@ public function wpext_add_snippet_page() { ?>
                 <div class="container">
                     <div class="wrap">
                         <form method="post" action="" class="wpext_add_newsnippets" id="wpext_save_snippet_form">
-                            <?php wp_nonce_field('save_snippet', 'wpext_snippet_nonce'); ?>
+                            <?php wp_nonce_field('update_snippet', 'wpext_snippet_nonce'); ?>
                             <div class="wrap addnew_edit">
                                 <div class="container">
                                     <div class="wpext_code_snippet_body" id="poststuff">
@@ -611,6 +611,7 @@ public function wpext_add_snippet_page() { ?>
     }
     public function wpext_update_snippet_status() {
         check_ajax_referer('update_snippet_status', 'security');
+
         $snippet_title = sanitize_text_field($_POST['snippet_title']);
         $snippet_id = intval($_POST['snippet_id']);
         $snippet_active = get_post_meta($snippet_id, 'snippet_active', true);
@@ -673,9 +674,15 @@ public function wpext_add_snippet_page() { ?>
           ?>
         <!-- Header button -->
         <div class="container-fluid wpe_brand_header">
-            <div class="container p-4 ps-2">
-                <h4 class="text-white ps-1 m-0 wpe_brand_header_title wpext_code_snippet_title"><?php _e('WP Extended Code Snippets', WP_EXTENDED_TEXT_DOMAIN); ?><sub>Beta</sub></h4>
-            </div>
+           <div class="container ps-2 p-4">
+              <div class="row">
+                 <div class="col-sm-8 col-md-6 ps-0">
+                    <h4 class="text-white ps-1 m-0 wpe_brand_header_title wpext_code_snippet_title"><?php _e('WP Extended Code Snippets', WP_EXTENDED_TEXT_DOMAIN); ?><sub>Beta</sub></h4>
+                 </div>
+                 <?php do_action('admin_plugin_top_info'); ?>
+              </div>
+              
+           </div>
         </div>
         <div class="container-fluid wp_brand_sub_header">
             <div class="container">
@@ -695,7 +702,7 @@ public function wpext_add_snippet_page() { ?>
                         <?php }
                         if(isset($_GET['page']) && sanitize_text_field($_GET['page']) == 'wp-extended-edit-snippet') { ?>
                         <a href='<?php echo admin_url('admin.php?page=wp-extended-snippets'); ?>' class="wp-ext-btn-sec"><?php _e('Back to Snippets', WP_EXTENDED_TEXT_DOMAIN);?></a>
-                        <button class="wpext_module_action wp-ext-btn-prim wpext_updeate_code_snippets" ><?php _e('Save', WP_EXTENDED_TEXT_DOMAIN);?></button>
+                        <button class="wpext_module_action wp-ext-btn-prim wpext_update_code_snippets" ><?php _e('Save', WP_EXTENDED_TEXT_DOMAIN);?></button>
                         <?php } ?>
                     </div>
                 </div>
@@ -705,7 +712,16 @@ public function wpext_add_snippet_page() { ?>
     <?php }
 
     public function wpext_handle_snippet_update() {
-        ob_start(); 
+
+        ob_start();   
+         check_admin_referer('update_snippet', 'wpext_snippet_nonce');
+ 
+        // Check if user has admin capabilities
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(['message' => __('You do not have permission to perform this action.', WP_EXTENDED_TEXT_DOMAIN)]);
+            return;
+        }
+        
         $snippet_id = isset($_POST['snippet_id']) ? intval($_POST['snippet_id']) : 0;
         $snippet_name = sanitize_text_field($_POST['snippet_name']);
         $snippet_code = isset($_POST['snippet_code']) ? wp_unslash($_POST['snippet_code']) : "<?php echo 'Hello World'; ?>"; 

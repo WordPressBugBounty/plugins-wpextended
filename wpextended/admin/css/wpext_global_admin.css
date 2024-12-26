@@ -1197,9 +1197,18 @@ a.wp_brand_sub_header_back_document:focus,
 }
 /*Convert post type css end here */
 @media screen and (max-width: 767px) {
+
   .wp_brand_sub_header .wp-ext-btn-sec {
     width: 100%;
     margin-bottom: 6px;
+  }
+  .wpext-upgrade-module {
+        justify-content: space-between;
+        margin-top: 20px;
+        
+    }
+  span.wpext_upgrade-to-pro{
+    margin: 0 !important;
   }
   .wp_brand_sub_header .wp_brand_sub_header_left {
     text-align: center;
@@ -1381,5 +1390,17 @@ a.wp_brand_sub_header_back_document:focus,
   }
   #wpext_active_modules {
     margin-top: 13px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wpext_active_modules_container {
+    display: none !important;
+}
+.tab.wpext_tab.sticky-sidebar-main {
+    gap: 10px;
+    padding-right: 0 !important;
+}
+.wpext_toggle_settings div#wp-extended-app .tablinks {
+    width: 31.33%;
   }
 }

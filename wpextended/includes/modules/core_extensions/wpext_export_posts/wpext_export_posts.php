@@ -110,7 +110,10 @@ class Wp_Extended_Export_Posts extends Wp_Extended_Export {
             if ( ! wp_verify_nonce( $_GET['wpext_nonce'], 'wpext-ajax-nonce' ) ) {
                 throw new \Exception( "Invalid nonce!" );  
             }
-
+            // Check user capability
+            if ( !current_user_can('manage_options') ) {
+                throw new \Exception(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN));
+            }
             // Get post ID and export format
             $id = intval($_GET['id']);
             $format = !empty(sanitize_mime_type($_GET['format'])) ? sanitize_mime_type($_GET['format']) : 'csv';

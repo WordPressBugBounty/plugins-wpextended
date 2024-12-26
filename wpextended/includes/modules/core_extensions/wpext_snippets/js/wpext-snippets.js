@@ -90,7 +90,7 @@
     /*Edit Update */
     var message = '';
     jQuery(document).ready(function($) {
-        $('.wpext_updeate_code_snippets').on('click', function(event) {
+        $('.wpext_update_code_snippets').on('click', function(event) {
             var snippettitle = jQuery('.snippet_name').val();
             if (snippettitle == '') {
                 jQuery('.snippet_name').addClass('wpext_danger');
@@ -106,7 +106,7 @@
             var snippet_active = $('#snippet_active').is(':checked') ? '1' : '0';
             var formData = {
                 action: 'handle_snippet_update',
-                security: wp_ajax_object.nonce,
+                wpext_snippet_nonce: $("#wpext_snippet_nonce").val(),
                 snippet_id: $('#snippet_id').val(),
                 snippet_name: $('.snippet_name').val(),
                 snippet_code: snippet_code, // Get value from CodeMirror instance

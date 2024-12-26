@@ -7,12 +7,12 @@ class Wp_Extended_User_Sections extends Wp_Extended {
   public function __construct() {
     parent::__construct();
 
-    add_action( 'admin_init',   array( $this, 'settings_init') );
+    add_action( 'admin_init',   array( $this, 'wpext_user_settings_init') );
     add_action( 'admin_menu',   array( $this, 'admin_init') );
     add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 110 );
-    add_action( 'user_edit_form_tag', array( $this, "add_title_filter" ) );
+    add_action( 'user_edit_form_tag', array( $this, "wpext_add_title_filter" ) );
     add_filter( 'pre_update_option_wpext-user-sections', array( $this, 'invert' ), 10, 3 );
-    add_action( 'admin_footer', array( $this,'user_profile_fields'));
+    add_action( 'admin_footer', array( $this,'wpext_user_profile_fields'));
      
   }
   public static function init(){
@@ -32,15 +32,15 @@ class Wp_Extended_User_Sections extends Wp_Extended {
     $screen = get_current_screen();
   } // admin_scripts
 
-  public function settings_init() {
+  public function wpext_user_settings_init() {
     
     register_setting( 'wpext-user-sections', 'wpext-user-sections', array( 'type' => 'array' ) );
     register_setting( 'wpext-user-sections', 'wpext-user-sections-toggle', array( 'type' => 'boolean' ) );
 
-  } // settings_init
+  } // wpext_user_settings_init
 
   // function to clean profile
-  public function user_profile_fields(){
+  public function wpext_user_profile_fields(){
     $user_option = get_option( 'wpext-user-sections');
     wp_add_inline_script( 'wpext-user-sections', 'const wpExtUserSections = ' . json_encode( $user_option ), 'before' );
   }
@@ -85,20 +85,20 @@ class Wp_Extended_User_Sections extends Wp_Extended {
     require_once plugin_dir_path( __FILE__ ) . "templates/wp-extend-module-layout.php"; 
   }
   
-  public function add_title_filter(){
-    add_filter( 'gettext', array( $this, 'filter_title' ), 999, 3 );
-    add_action( 'admin_footer', array( $this, 'print_titles_map' ) );
+  public function wpext_add_title_filter(){
+    add_filter( 'gettext', array( $this, 'wpext_filter_title' ), 999, 3 );
+    add_action( 'admin_footer', array( $this, 'wpext_print_titles_map' ) );
   } 
 
-  public function filter_title( $translation, $text, $domain ){
+  public function wpext_filter_title( $translation, $text, $domain ){
     if( !isset( self::$titles_map[ $translation ] ) ) {
       self::$titles_map[ $translation ] = $text;
     }
 
     return $translation;
-  } // filter_title
+  } // wpext_filter_title
 
-  public function print_titles_map(){  
+  public function wpext_print_titles_map(){  
     echo "<script type='application/json' id='wpext-user-sections-titles'>", json_encode( self::$titles_map ), "</script>";
   }
 

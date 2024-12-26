@@ -25,7 +25,6 @@ if ( ! empty( $_GET['theme_file'] ) && file_exists( WP_CONTENT_DIR . '/themes/' 
 		do_action( 'wpext_theme_failure', $result );
 	} die;
 } elseif ( ! empty( $_GET['plugin_file'] ) && file_exists( WP_PLUGIN_DIR . '/' . $_GET['plugin_file'] ) ) {
-
 	// This is a plugin rollback.
 	$title   = $_GET['rollback_name'];
 	$nonce   = 'upgrade-plugin_' . self::set_plugin_slug();

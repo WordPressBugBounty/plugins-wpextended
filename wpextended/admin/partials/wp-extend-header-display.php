@@ -20,7 +20,13 @@ foreach ($modules as $module) {
 ?>
 <div class="container-fluid wpe_brand_header">
    <div class="container ps-2 p-4">
-      <h4 class="text-white ps-1 m-0 wpe_brand_header_title"><?php _e( "WP Extended ".$module_title, WP_EXTENDED_TEXT_DOMAIN ); ?></h4>
+      <div class="row">
+         <div class="col-sm-8 col-md-6 ps-0">
+            <h4 class="text-white ps-1 m-0 wpe_brand_header_title"><?php _e( "WP Extended ".$module_title, WP_EXTENDED_TEXT_DOMAIN ); ?></h4>
+         </div>
+         <?php do_action('admin_plugin_top_info'); ?>
+      </div>
+      
    </div>
 </div>
 <?php do_action('wpext_module_save_btn_header'); ?>

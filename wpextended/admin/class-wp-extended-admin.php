@@ -41,7 +41,6 @@ class Wp_Extended_admin extends Wp_Extended {
     add_action('admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
     add_action('admin_enqueue_scripts', array( $this, 'enqueue_scripts' ), 99 );
     add_action('wp_ajax_wp-extended-module-toggle',   array( $this, 'module_toggle_ajax') );
-    add_action('wpext_plugin_sidebar', array( $this, 'admin_plugin_info_sidebar' ), 100 );
     add_action('admin_plugin_top_info', array( $this, 'wpext_admin_plugin_top_info' ), 100 );
     
     add_filter( 'plugin_action_links_' . WP_EXTENDED_PLUGIN_BASE, array( $this,'add_pro_action_links') );
@@ -464,6 +463,13 @@ class Wp_Extended_admin extends Wp_Extended {
   /* Storing action for reset data via ajax*/
   public function wpext_reset_plugin_settings() {
     check_ajax_referer('extended_obj', 'nonce');
+
+     // Check user capability
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+    }
+
     $status = sanitize_text_field($_POST['status']);
     $response = array();
     if (!empty($status)) {
@@ -486,6 +492,11 @@ class Wp_Extended_admin extends Wp_Extended {
 
 public function wpext_show_plugin_menu(){
     check_ajax_referer('extended_obj', 'nonce');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+    }
+
     $status = sanitize_text_field($_POST['status']);
     $response = array();
     if (!empty($status)) {
@@ -539,6 +550,11 @@ public function wpext_show_plugin_menu(){
 
   public function wpext_admin_menu_favorite_callback(){
     check_ajax_referer('extended_obj', 'nonce');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+    }
+
     $status = sanitize_text_field($_POST['status']);
     $dataSlug = sanitize_text_field($_POST['dataSlug']);
     $dataName = sanitize_text_field($_POST['dataName']);
@@ -576,6 +592,10 @@ public function wpext_show_plugin_menu(){
   /** Function for Import all plugin setting **/
     public function wpext_import_json_data_callback() {
       check_ajax_referer('extended_obj', 'security');
+      if (!current_user_can('manage_options')) {
+          wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+          wp_die();
+      }
       $response = array();
       if (!empty($_FILES['file_data']['name'])) {
           $uploaded_file = $_FILES['file_data'];
@@ -643,6 +663,10 @@ public function wpext_show_plugin_menu(){
   /** Function for Import all plugin setting **/
   public function wpext_export_options_to_json() {
     check_ajax_referer('extended_obj', 'security');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+    }
     // Array of option names you want to export
      $response = array();
     $option_names = [
@@ -909,6 +933,11 @@ public function wpext_show_plugin_menu(){
 
   public function wpext_active_modules_callback(){
     check_ajax_referer('extended_obj', 'nonce');
+    // Check user capability
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+    }
     $module_action = sanitize_text_field($_REQUEST['status']);
     if(isset($module_action)){
       update_option('wpext_active_modules_status',$module_action);

@@ -8,7 +8,6 @@ class Wp_Extended_Post_Order extends Wp_Extended {
     add_post_type_support( 'post', 'page-attributes' );
     add_action( 'admin_init',   array( $this, 'settings_init') );
     add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 110 );
-    // add_filter( 'posts_orderby', array( $this, 'orderby_menu_order' ), 10, 2 );
     add_action( 'wp_insert_post', array( $this, 'post_created' ), 10, 3 );
     add_action( 'rest_api_init', array( $this, 'route_register' ) );
   }
@@ -130,17 +129,6 @@ class Wp_Extended_Post_Order extends Wp_Extended {
     }
 
   } // redirect_to_orderby_menu_order
-
-  public function orderby_menu_order( $orderby, $query ){
-    /*
-    if( !is_admin() ) {
-      return 'menu_order';
-    }
-    */
-
-    return $orderby;
-  } // 
-
 
   public function post_created( int $post_ID, WP_Post $post, $update ) {
     if( $update ) {

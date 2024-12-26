@@ -21,8 +21,6 @@ class Wp_Extended_Tidy_Nav extends Wp_Extended_Export {
     add_action( 'admin_init',   array( $this, 'wpext_user_nav_settings_store') );
     add_action( 'wp_ajax_render_data_byuser_role', array($this, 'render_data_byuser_role'));
     add_filter( 'custom_menu_order', '__return_true' );
-
-    add_action( 'wp_ajax_render_data_byuser_id', array($this, 'render_data_byuser_id'));
     add_action( 'admin_footer', array( $this,'wpext_user_data_fields'));
     add_action( 'wp_ajax_save_table_order', array( $this,'save_table_order_ajax'));
     $user = wp_get_current_user();
@@ -582,6 +580,10 @@ public function wpext_custom_side_menu_page_removing(){
   foreach ($fetch_hide_menu_array as $role_key => $hide_menu_array_role) {
    if(in_array($role_key, $login_user_roles)){
         foreach ($hide_menu_array_role as $hide_menu_array) {
+        // If vc-general is being hidden, also hide vc-welcome
+        if($hide_menu_array == 'vc-general') {
+          remove_menu_page('vc-welcome');
+        }
           remove_menu_page( $hide_menu_array );
 
           /**
@@ -623,6 +625,17 @@ foreach ($fetch_hide_sub_menu_array as $role_key => $hide_menu_array) {
 }
 
 public function render_data_byuser_role(){
+  // Verify nonce
+  if (!isset($_REQUEST['nonce']) || !wp_verify_nonce($_REQUEST['nonce'], 'user-roles')) {
+    wp_send_json_error(['message' => 'Invalid nonce.']);
+  }
+
+  // Check user capability
+  if (!current_user_can('manage_options')) {
+    wp_send_json_error(['message' => __('Unauthorized access.', 'wp-extended-text-domain')], 403);
+    wp_die();
+  }
+
   $html = '';
   $user_role = sanitize_text_field($_REQUEST['user_role']);
   if(isset($user_role)){
@@ -803,7 +816,7 @@ public function wpext_user_nav_settings_store(){
   
   $login_user_roles = array();
   if (!empty($login_user->data)) {
-    $login_user_roles = (array) $login_user->data->user_login;
+    $login_user_roles = (array) $login_user->roles;
     if(empty($login_user_roles)){
       $login_user_roles = array();
     }
@@ -853,6 +866,16 @@ public function wpext_user_data_fields(){
 // AJAX handler to save table order
 
 public function save_table_order_ajax() {
+  // Verify the nonce
+  if (!isset($_POST['security']) || !wp_verify_nonce($_POST['security'], 'user-roles')) {
+      wp_send_json_error(['message' => 'Nonce verification failed.'], 403);
+  }
+  // Check user capability
+  if (!current_user_can('manage_options')) {
+    wp_send_json_error(['message' => __('Unauthorized access.', 'wp-extended-text-domain')], 403);
+    wp_die();
+  }
+
   if (isset($_POST['order']) && is_array($_POST['order'])) {
     $order = $_POST['order']; 
     $user_role = $_POST['user_role'];
@@ -919,6 +942,17 @@ public function render_custom_menu_order($menu_order){
  }
  
  public function wpext_remove_role_order(){
+  // Verify nonce
+  if (!isset($_REQUEST['nonce']) || !wp_verify_nonce($_REQUEST['nonce'], 'user-roles')) {
+    wp_send_json_error(['message' => 'Invalid nonce.']);
+  }
+
+  // Check user capability
+  if (!current_user_can('manage_options')) {
+    wp_send_json_error(['message' => __('Unauthorized access.', 'wp-extended-text-domain')], 403);
+    wp_die();
+  }
+  
   if(isset($_REQUEST['current_role'])){
     $current_role = sanitize_text_field($_REQUEST['current_role']);
     delete_option('custom_table_order'.$current_role);

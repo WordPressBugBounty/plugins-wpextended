@@ -26,6 +26,10 @@ class Wp_Extended_Duplicator extends Wp_Extended {
       if ( ! wp_verify_nonce( $_REQUEST['wpext_nonce'], 'wpext-ajax-nonce' ) ) {
         throw new \Exception( "Invalid nonce!" );  
       }
+      if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Unauthorized access.', WP_EXTENDED_TEXT_DOMAIN), 403);
+        wp_die();
+      }
       $post_ID = intval($_REQUEST['post_ID']);
       if ( ! current_user_can( 'edit_post', $post_ID ) ) {
         throw new \Exception( __( "You are not allowed to duplicate this post.", WP_EXTENDED_TEXT_DOMAIN ) );

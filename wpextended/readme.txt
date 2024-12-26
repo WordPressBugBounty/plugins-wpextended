@@ -2,8 +2,8 @@
 Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
-Tested up to: 6.7
-Stable tag: 3.0.11
+Tested up to: 6.7.1
+Stable tag: 3.0.12
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,13 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.0.12 - 26 December 2024 =
+* Security Fix: Missing Authorization to Authenticated (Subscriber+) Remote Code Execution.
+* Fix: Menu Editor - The disabled menu does not go away (in the WP Bakery plugin).
+* Fix: Menu Editor - Fix/undefined user login
+* Improvement: Export Posts & Pages - Fixed escaping issue with download URL
+* Update: Tested with WordPress 6.7.1
 
 = 3.0.11 - 20 November 2024 =
 * Improvement: Fixed design issues with the rollback button.

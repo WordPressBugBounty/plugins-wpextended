@@ -38,6 +38,7 @@ class Wp_Extended_Disable_Feeds extends Wp_Extended_Export
      */
     public function wpext_redirect_feed_to_page()
     {
+        // Check if this is a feed request
         if (is_feed()) {
             status_header(403);
             wp_die(
