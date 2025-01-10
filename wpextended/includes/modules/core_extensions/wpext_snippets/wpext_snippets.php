@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-require_once plugin_dir_path( __FILE__ ) . 'wp-extend-module-listing.php'; 
-require_once plugin_dir_path( __FILE__ ) . 'old/wpext_snippets.php'; 
+require_once plugin_dir_path( __FILE__ ) . 'wp-extend-module-listing.php';
+require_once plugin_dir_path( __FILE__ ) . 'old/wpext_snippets.php';
 
 // Initialize the plugin
 class Wp_Extended_Snippets extends Custom_List_Table {
@@ -29,7 +29,7 @@ class Wp_Extended_Snippets extends Custom_List_Table {
         add_action('admin_init', array($this, 'wpext_website_safe_mode_callback'));
         add_action('admin_notices', array($this, 'wpext_show_safe_mode_notice'));
     }
-   
+
     public function wpext_admin_scripts_snippets($hook) {
         wp_enqueue_script('jquery');
         if (in_array($hook, [
@@ -108,12 +108,12 @@ class Wp_Extended_Snippets extends Custom_List_Table {
           add_submenu_page('', '', '', $capability, $slug, $callback);
           add_rewrite_rule('^wp-extended-snippets/?', 'index.php?wp_extended_snippets=1', 'top');
           add_rewrite_tag('%wp_extended_snippets%', '([^&]+)');
-        }  
+        }
         add_submenu_page('', __('Add New Snippet', 'wp-extended-snippets'), __('Add New Snippet', 'wp-extended-snippets'), 'manage_options', 'wp-extended-add-snippet', array($this, 'wpext_add_snippet_page'));
         add_submenu_page('', __('Edit Snippet', 'wp-extended-snippets'), __('Edit Snippet', 'wp-extended-snippets'), 'manage_options', 'wp-extended-edit-snippet', array($this, 'edit_snippet_page'));
     }
 
-    public function list_snippets_page() { 
+    public function list_snippets_page() {
 
         $snippets = new WP_Query(array( 'post_type' => 'snippet', 'posts_per_page' => -1 )); ?>
         <div class="position-fixed top-0 end-0 p-3 license_status">
@@ -148,7 +148,7 @@ class Wp_Extended_Snippets extends Custom_List_Table {
                                     <a href="<?php echo admin_url('admin.php?page=wp-extended-snippets-old'); ?>" class="wp_brand_sub_header_back_document" target="_blank">
                                     <?php _e('click here', WP_EXTENDED_TEXT_DOMAIN); ?></a>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <?php } elseif (isset($_GET['page']) && $_GET['page'] === 'wp-extended-snippets' && isset($_GET['wpext_safe_mode']) && $_GET['wpext_safe_mode'] === '1') { ?>
@@ -196,13 +196,13 @@ class Wp_Extended_Snippets extends Custom_List_Table {
         if (isset($_POST['action']) && $_POST['action'] == 'save_snippet') {
             check_admin_referer('save_snippet', 'wpext_snippet_nonce');
             $snippet_name = isset($_POST['snippet_name']) ? sanitize_text_field($_POST['snippet_name']) : '';
-            
+
             $snippet_code_type = isset($_POST['snippet_code_type']) ? sanitize_text_field($_POST['snippet_code_type']) : '';
             $snippet_position = isset($_POST['snippet_position']) ? sanitize_text_field($_POST['snippet_position']) : '';
             if(isset($snippet_code_type) && $snippet_code_type == 'PHP'){
                 $snippet_position = 'head';
             }else{
-               $snippet_position = $snippet_position; 
+               $snippet_position = $snippet_position;
             }
             $snippet_code_sesc = isset($_POST['snippet_code_sesc']) ? sanitize_text_field($_POST['snippet_code_sesc']) : '';
             $snippet_active = isset($_POST['snippet_active']) ? sanitize_text_field($_POST['snippet_active']) : '';
@@ -211,7 +211,7 @@ class Wp_Extended_Snippets extends Custom_List_Table {
                 $syntax_error = $this->check_php_syntax_error($snippet_code);
                 if ($syntax_error) {
                     wp_send_json_error(['message' => $syntax_error]);
-                } 
+                }
             }
             try {
                 // Check if a snippet with the same title already exists
@@ -292,10 +292,10 @@ public function wpext_add_snippet_page() { ?>
                                 <div class="row justify-content-between wpext_add_snippet_body">
                                     <div class="wpext_snippet_top_section d-flex mb-3">
                                         <div class="col-3">
-                                            <h2 class="wpext_snippet_title"> 
-                                                <?php 
-                                                    $selected_option = isset($_GET['selected_option']) ? sanitize_text_field($_GET['selected_option']) : ''; 
-                                                    echo esc_html($selected_option); 
+                                            <h2 class="wpext_snippet_title">
+                                                <?php
+                                                    $selected_option = isset($_GET['selected_option']) ? sanitize_text_field($_GET['selected_option']) : '';
+                                                    echo esc_html($selected_option);
                                                 ?>
                                             </h2>
                                             <?php self::wpext_custom_css_content($selected_option); ?>
@@ -319,12 +319,12 @@ public function wpext_add_snippet_page() { ?>
                                     </div>
                                     <div id="post-body-content">
                                         <div class="wpext_snippet_short_desc mb-3">
-                                            
+
                                             <div id="titlewrap" class="wpext_snippet_code_title mb-3">
                                                 <label class="screen-reader-text" for="snippet_name"><?php _e('Enter title here', WP_EXTENDED_TEXT_DOMAIN); ?></label>
                                                 <input type="text" name="snippet_name" size="30" value="" spellcheck="true" autocomplete="off" placeholder="<?php _e('Snippet Title', WP_EXTENDED_TEXT_DOMAIN); ?>" class="form-control wpext_smtp_config_from  wpext_snippet_name mb-2" required>
                                             </div>
-                                            
+
                                             <div class="wpext_snippet_description mb-2">
                                                 <div class="inside">
                                                     <textarea name="snippet_code_sesc" id="snippet_code_sesc" class="w-100 large-text code-editor" placeholder="<?php _e('Description', WP_EXTENDED_TEXT_DOMAIN ); ?>" rows="4"></textarea>
@@ -338,14 +338,14 @@ public function wpext_add_snippet_page() { ?>
                                                 <textarea name="snippet_code" id="snippet_codess" rows="50" class="large-text code-editor"></textarea>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
-                <?php 
+                <?php
                 $mode = '';
                 if (isset($selected_option) && $selected_option == 'JAVASCRIPT') {
                     $mode = 'text/javascript';
@@ -362,8 +362,8 @@ public function wpext_add_snippet_page() { ?>
                         editorSettings.codemirror = _.extend(
                             {},
                             editorSettings.codemirror,
-                            {   
-                                mode: '<?php echo $mode; ?>', 
+                            {
+                                mode: '<?php echo $mode; ?>',
                                 indentUnit: 4,
                                 indentWithTabs: true,
                                 lineNumbers: true,
@@ -407,7 +407,7 @@ public function wpext_add_snippet_page() { ?>
         $snippet_code_type = get_post_meta($snippet_id, 'snippet_code_type', true);
 
     ?>
-     
+
     <!-- Header button -->
     <?php $this->wpext_header_button(); ?>
     <!-- Header button end here -->
@@ -478,7 +478,7 @@ public function wpext_add_snippet_page() { ?>
                             </div>
                         </form>
                         <?php
-     
+
                     $mode = '';
                     if (isset($snippet_code_type) && $snippet_code_type == 'JAVASCRIPT') {
                         $mode = 'text/javascript';
@@ -494,8 +494,8 @@ public function wpext_add_snippet_page() { ?>
                             editorSettings.codemirror = _.extend(
                                 {},
                                 editorSettings.codemirror,
-                                {   
-                                    mode: '<?php echo $mode; ?>', 
+                                {
+                                    mode: '<?php echo $mode; ?>',
                                     indentUnit: 4,
                                     indentWithTabs: true,
                                     lineNumbers: true,
@@ -585,7 +585,7 @@ public function wpext_add_snippet_page() { ?>
                 $code = get_the_content();
                 $code_type = get_post_meta(get_the_ID(), 'snippet_code_type', true);
                 if ($snippet_active != 1) {
-                    continue;  
+                    continue;
                 }
                if ($code_type === 'PHP' && (!isset($_POST['wpext_update_flag']) || $_POST['wpext_update_flag'] != 'update_token')) {
                     eval($code);
@@ -627,7 +627,7 @@ public function wpext_add_snippet_page() { ?>
             $syntax_error = $this->check_php_syntax_error($snippet_code);
             if ($syntax_error) {
             wp_send_json_error(['message' => $syntax_error]);
-            } 
+            }
         }
         try {
             $code_snippet_title = __('Code Snippets ', WP_EXTENDED_TEXT_DOMAIN);
@@ -668,9 +668,9 @@ public function wpext_add_snippet_page() { ?>
         die;
     }
 
-    public static function wpext_header_button(){ 
+    public static function wpext_header_button(){
           $snippetList = new WP_List_Table();
-          $items = $snippetList->get_items(); 
+          $items = $snippetList->get_items();
           ?>
         <!-- Header button -->
         <div class="container-fluid wpe_brand_header">
@@ -770,15 +770,15 @@ public function wpext_add_snippet_page() { ?>
         wp_die();
     }
 
-    public function wpext_custom_css_content($code){ 
-        if(!empty($code) && $code == 'PHP'){  
+    public function wpext_custom_css_content($code){
+        if(!empty($code) && $code == 'PHP'){
             echo '<style type="text/css"> .wpext_add_newsnippets .CodeMirror-sizer:before {  content: "<?php"; padding-bottom: 5px; opacity: 0.5; } </style>';
-            }else if(!empty($code) && $code == 'CSS'){  
+            }else if(!empty($code) && $code == 'CSS'){
                 echo '<style type="text/css"> .wpext_add_newsnippets .CodeMirror-sizer:before { content: "<style>"; padding-bottom: 5px; opacity: 0.5; } </style>';
-            }else if(!empty($code) && $code == 'HTML'){  
+            }else if(!empty($code) && $code == 'HTML'){
                 echo '<style type="text/css"> .wpext_add_newsnippets .CodeMirror-sizer:before { content: "<HTML>"; padding-bottom: 5px; opacity: 0.5; } </style>';
-            }else{ 
-                echo '<style type="text/css"> .wpext_add_newsnippets .CodeMirror-sizer:before { content: "<script>"; padding-bottom: 5px; opacity: 0.5; } </style>';  
+            }else{
+                echo '<style type="text/css"> .wpext_add_newsnippets .CodeMirror-sizer:before { content: "<script>"; padding-bottom: 5px; opacity: 0.5; } </style>';
         }
     }
 
@@ -814,7 +814,7 @@ public function wpext_add_snippet_page() { ?>
             return 'Syntax error detected on line ' . $e->getLine() . ': ' . $e->getMessage();
         } catch (ErrorException $e) {
             return 'Runtime error detected on line ' . $e->getLine() . ': ' . $e->getMessage();
-        } catch (Throwable $e) { 
+        } catch (Throwable $e) {
             return 'Error detected on line ' . $e->getLine();
         } finally {
             // Restore the original error handler
@@ -844,7 +844,7 @@ public function wpext_add_snippet_page() { ?>
                      update_post_meta($post_id, 'snippet_active', '0');
                     }
                 }
-                
+
                 wp_reset_postdata();
             }
         }

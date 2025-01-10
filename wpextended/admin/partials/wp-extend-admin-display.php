@@ -71,28 +71,20 @@ $module_group = array(
                        </a>
                     </div>
                     <div class="wpext_active_modules_container me-lg-3">
-                     <?php 
-                     $wpext_module_status = get_option('wp-extended-modules');
-                       $has_displayed = false;
-                        foreach($wpext_module_status as $key => $module_status) {
-                            if(!empty($module_status) && !$has_displayed) { ?>
-                                <label for="wpext_active_modules" class="mt-1"><?php _e('Active Modules', WP_EXTENDED_TEXT_DOMAIN); ?></label>
-                                <div class="field form-check form-switch form-switch-md">
-                                    <?php 
-                                    $action_module_status = get_option('wpext_active_modules_status');
-                                    if($action_module_status == 'true'){
-                                        $status = 'checked';
-                                    } else {
-                                        $status = '';
-                                    }                           
-                                    ?>
-                                    <input id="wpext_active_modules" name="wpext_active_modules" type="checkbox" class="form-check-input" <?php echo $status; ?>  role="switch">
-                                </div>
-                            <?php
-                                $has_displayed = true; // Set the flag to true to prevent further display
-                            }
-                        } ?>
-                  </div>
+                        <label for="wpext_active_modules" class="mt-1"><?php _e('Active Modules',WP_EXTENDED_TEXT_DOMAIN); ?></label>
+                        <div class="field form-check form-switch form-switch-md">
+                           <?php 
+                           $action_module_status = get_option('wpext_active_modules_status');
+                           
+                           if($action_module_status == 'true'){
+                             $status = 'checked';
+                           }else{
+                              $status = '';
+                           }                           
+                           ?>
+                           <input id="wpext_active_modules" name="wpext_active_modules" type="checkbox" class="form-check-input" <?php echo $status; ?> role="switch">
+                        </div>
+                     </div>
                   </div>
                   <!-- end grid section -->
             </div>

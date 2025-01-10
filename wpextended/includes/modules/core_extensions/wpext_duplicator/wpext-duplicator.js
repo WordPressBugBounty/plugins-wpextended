@@ -10,7 +10,9 @@ window.addEventListener('DOMContentLoaded', function(){
     fetch( btn.href )
     .then( response => {
       if( !response.ok ) {
-        alert( "Failed" );
+        response.text().then((error) => {
+          alert("Error: " + error);
+        });
         return;
       }
 

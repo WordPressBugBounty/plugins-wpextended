@@ -190,7 +190,7 @@ class Wp_Extended_Export extends Wp_Extended {
     );
 
     if( !empty($_GET['wpext-export']) ) {
-      wp_add_inline_script( 'wpext-export', 'const wpext_download_url = "' . $_GET['wpext-export'] . '";', 'before' );
+      wp_add_inline_script('wpext-export', 'const wpext_download_url = "' . esc_url($_GET['wpext-export']) . '";', 'before');
     }
 
     $done = true;

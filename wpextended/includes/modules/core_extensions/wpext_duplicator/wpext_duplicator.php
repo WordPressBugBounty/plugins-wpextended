@@ -86,7 +86,7 @@ class Wp_Extended_Duplicator extends Wp_Extended {
       'to_ping'        => $post->to_ping,
       'menu_order'     => $post->menu_order
     );
-    $inserted = wp_insert_post( $args );
+    $inserted = wp_insert_post( wp_slash( $args ), true );
 
       if( !$inserted ) {
         throw new \Exception( "Failed to save new post" );

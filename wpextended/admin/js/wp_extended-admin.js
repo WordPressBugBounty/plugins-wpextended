@@ -539,10 +539,10 @@ jQuery(document).ready(function () {
   function toggleItemsVisibility() {
     var activeModulesChecked = jQuery('#wpext_active_modules').is(':checked');
     var url = new URL(window.location.href);
-    
+
     // Get the 'page' parameter from the URL
-    var page = url.searchParams.get("page");
-    if( page == 'wp-extended'){
+    var page = url.searchParams.get('page');
+    if (page == 'wp-extended') {
       var activeModuleSlug = jQuery(
         '#wp-extended-app .wpext_tab .tablinks.active',
       )
@@ -601,12 +601,6 @@ jQuery(document).ready(function () {
       toggleItemsVisibility();
     });
   }
-
-  // Delay the visibility toggle when the page reloads
-  setTimeout(function () {
-    toggleItemsVisibility();
-  }, 100);
-
   jQuery('#wpext_active_modules').on('change', function () {
     var isChecked = this.checked;
     jQuery.ajax({
@@ -621,30 +615,3 @@ jQuery(document).ready(function () {
     });
   });
 });
-/*Hide show active module */
-jQuery(document).ready(function ($) {
-  // Function to toggle visibility of the container based on checkboxes' state
-  function toggleActiveModulesContainer() {
-    var $checkboxes = $(
-      '.wpext_toggle_settings .card-footer input[type="checkbox"]',
-    );
-    var $activeModulesContainer = $(
-      '.wpext_toggle_settings .wpext_active_modules_container',
-    );
-    var anyChecked = $checkboxes.is(':checked');
-    if (anyChecked) {
-      $activeModulesContainer.show();
-    } else {
-      $activeModulesContainer.hide();
-    }
-  }
-  $('.wpext_toggle_settings .card-footer input[type="checkbox"]').click(
-    function () {
-      toggleActiveModulesContainer();
-    },
-  );
-
-  // Initial call to set the correct visibility based on checkbox states
-  toggleActiveModulesContainer();
-});
-/*Hide show active module end here */
