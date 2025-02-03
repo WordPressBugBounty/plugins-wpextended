@@ -3,7 +3,7 @@ Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
 Tested up to: 6.7.1
-Stable tag: 3.0.13
+Stable tag: 3.0.14
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,9 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.0.14 - 3 February 2025 =
+* Fix: Unauthorized modification of data due to a missing capability check on the reorder_route() function.
 
 = 3.0.13 - 10 January 2025 =
 * Fix: Login Attempts Module - Unauthenticated SQL Injection and sanitization and uses values.

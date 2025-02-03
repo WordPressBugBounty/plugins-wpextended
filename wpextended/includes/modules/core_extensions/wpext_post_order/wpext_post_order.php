@@ -2,15 +2,15 @@
 
 class Wp_Extended_Post_Order extends Wp_Extended {
 
-	public function __construct() {
+  public function __construct() {
     parent::__construct();
 
-    add_post_type_support( 'post', 'page-attributes' );
-    add_action( 'admin_init',   array( $this, 'settings_init') );
-    add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 110 );
-    add_action( 'wp_insert_post', array( $this, 'post_created' ), 10, 3 );
-    add_action( 'rest_api_init', array( $this, 'route_register' ) );
-  }
+    add_post_type_support('post', 'page-attributes');
+    add_action('admin_init', array($this, 'settings_init'));
+    add_action('admin_enqueue_scripts', array($this, 'admin_scripts'), 110);
+    add_action('wp_insert_post', array($this, 'post_created'), 10, 3);
+    add_action('rest_api_init', array($this, 'route_register'));
+}
 
   public static function init(){
     static $instance = null;
@@ -32,28 +32,30 @@ class Wp_Extended_Post_Order extends Wp_Extended {
   } // settings_init
   
 
-  public function admin_scripts(){
+  public function admin_scripts() {
     $screen = get_current_screen();
-    if( $screen->id == "edit-post" || $screen->id == "edit-page" ) {
-      wp_enqueue_script( 'jquery-ui-sortable', false, array('jquery', 'jquery-ui-core') );
-      wp_enqueue_script( 'wpext-post-order', 
-        plugins_url("/js/wpext-post-order.js", __FILE__), 
-        array(), 
-        filemtime( plugin_dir_path( __FILE__ ) . "/js/wpext-post-order.js" ), 
-        true 
-      );
-      wp_enqueue_style( 'wpext-post-order', 
-        plugins_url("/css/wpext-post-order.css", __FILE__), 
-        array(), 
-        filemtime( plugin_dir_path( __FILE__ ) . "/css/wpext-post-order.css" )
-      );
-       wp_localize_script( 'wp-api', 'wpApiSettings', array(
-        'root' => esc_url_raw( rest_url() ),
-        'nonce' => wp_create_nonce( 'wp_rest' )
-      ) );
-      wp_enqueue_script('wp-api');      
+    if ($screen->id == "edit-post" || $screen->id == "edit-page") {
+        wp_enqueue_script('jquery-ui-sortable', false, array('jquery', 'jquery-ui-core'));
+        wp_enqueue_script('wpext-post-order', 
+            plugins_url("/js/wpext-post-order.js", __FILE__), 
+            array(), 
+            filemtime(plugin_dir_path(__FILE__) . "/js/wpext-post-order.js"), 
+            true
+        );
+        wp_enqueue_style('wpext-post-order', 
+            plugins_url("/css/wpext-post-order.css", __FILE__), 
+            array(), 
+            filemtime(plugin_dir_path(__FILE__) . "/css/wpext-post-order.css")
+        );
+        
+        // Add nonce to REST API settings
+        wp_localize_script('wpext-post-order', 'wpextPostOrder', array(
+            'root' => esc_url_raw(rest_url()),
+            'nonce' => wp_create_nonce('wp_rest'),
+        ));
     }
-  }
+}
+
   public function manage_columns_column( $name, $post_ID ) {
     if( $name !== 'wpext_order' ) {
       return;
@@ -179,70 +181,95 @@ class Wp_Extended_Post_Order extends Wp_Extended {
 
   } // notice
 
-public function route_register(){
-  
-    register_rest_route( 'wpext/v1', '/reorder', array(
-      'methods' => 'POST',
-      'callback' => array( $this, 'reorder_route' ),
-      'permission_callback' => array( $this, 'route_rights_check' )
-    ) );
-  
-  } // route_register
-
-  public function route_rights_check(){
-    return true;
-    // return current_user_can( 'edit_others_posts' );
+  public function route_register() {
+    register_rest_route('wpext/v1', '/reorder', array(
+        'methods' => 'POST',
+        'callback' => array($this, 'reorder_route'),
+        'permission_callback' => array($this, 'route_rights_check')
+    ));
   }
-  public function reorder_route(){
-      try {
-      $items = sanitize_post($_POST['items']);
-      if( empty($items) ) {
-        throw new \Exception( "Empty request" );
-      }
-      $errors = array();
-      $saved = array();
 
-      foreach( $items as $item ) {
-        try {
-          if( empty($item['id']) ) {
-            throw new \Exception( "Item does not have ID: " . json_encode( $item ) );
-          }
-        
-          $post = get_post( $item['id'] );
-
-          if( !$post ) {
-            throw new \Exception( "Post not found: " . json_encode( $item ) );
-          }
-
-          if( $post->menu_order === $item['order'] ) {
-            throw new \Exception( "Item {$item->id} order has not changed" );
-          }
-
-          $post->menu_order = $item['order'];
-
-          $updated = wp_update_post( $post );
-
-          if( !$updated ) {
-            throw new \Exception( "Update of post {$item->id} failed" );
-          }
-
-          if( is_wp_error($updated) ) {
-            throw new \Exception( "Updated of post {$item->id} failed with " . implode( "\n", $updated->errors) );
-          }
-
-          $saved[] = $item;
-        }
-        catch( \Exception $e ) {
-          $errors[] = $e->getMessage();
-        }
-      }
-      $result = array( 'status' => true, 'errors' => $errors, 'saved' => $saved );
+public function route_rights_check() {
+    // Check if user is logged in and has proper capabilities
+    if (!is_user_logged_in()) {
+        return false;
     }
-    catch( \Exception $e ) {
-      $result = array( 'status' => false, 'error' => $e->getMessage() );
+
+    // Check for post type and assign appropriate capability
+    $post_type = isset($_POST['post_type']) ? sanitize_text_field($_POST['post_type']) : 'post';
+    $capability = $post_type === 'page' ? 'edit_pages' : 'edit_posts';
+
+    // Verify user has required capability
+    if (!current_user_can($capability)) {
+        return false;
     }
-    wp_send_json( $result );
+
+    // Verify nonce
+    $nonce = isset($_SERVER['HTTP_X_WP_NONCE']) ? $_SERVER['HTTP_X_WP_NONCE'] : '';
+    if (!wp_verify_nonce($nonce, 'wp_rest')) {
+        return false;
+    }
+
+    return true;
+}
+
+public function reorder_route() {
+    try {
+        // Verify request
+        if (!isset($_POST['items']) || !is_array($_POST['items'])) {
+            throw new \Exception("Invalid request format");
+        }
+
+        $items = array_map(function($item) {
+            return array(
+                'id' => isset($item['id']) ? absint($item['id']) : 0,
+                'order' => isset($item['order']) ? absint($item['order']) : 0
+            );
+        }, $_POST['items']);
+
+        if (empty($items)) {
+            throw new \Exception("Empty request");
+        }
+
+        $errors = array();
+        $saved = array();
+
+        foreach ($items as $item) {
+            try {
+                if (empty($item['id'])) {
+                    throw new \Exception("Item does not have ID: " . json_encode($item));
+                }
+
+                // Additional capability check per post
+                $post = get_post($item['id']);
+                if (!$post || !current_user_can('edit_post', $item['id'])) {
+                    throw new \Exception("Insufficient permissions for post: " . $item['id']);
+                }
+
+                if ($post->menu_order === $item['order']) {
+                    continue; // Skip if order hasn't changed
+                }
+
+                $post->menu_order = $item['order'];
+                $updated = wp_update_post($post);
+
+                if (!$updated || is_wp_error($updated)) {
+                    throw new \Exception("Update failed for post " . $item['id']);
+                }
+
+                $saved[] = $item;
+            } catch (\Exception $e) {
+                $errors[] = $e->getMessage();
+            }
+        }
+
+        $result = array('status' => true, 'errors' => $errors, 'saved' => $saved);
+    } catch (\Exception $e) {
+        $result = array('status' => false, 'error' => $e->getMessage());
+    }
+
+    wp_send_json($result);
     wp_die();
-  } // reorder_route
+  }
 }
 Wp_Extended_Post_Order::init();
