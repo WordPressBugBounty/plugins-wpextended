@@ -3,7 +3,7 @@ Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
 Tested up to: 6.7.1
-Stable tag: 3.0.14
+Stable tag: 3.0.15
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=r72I2rlS1Pk
 
 https://www.youtube.com/watch?v=yvc4XgB2pg0
 
-= Key Free Features: = 
+= Key Free Features: =
 
 - **Indexing Notice**. Control the indexing status of your site.
 - **Disable Video Uploads**. Disable video uploads to save storage space.
@@ -140,8 +140,11 @@ For documentation and tutorials visit our [Knowledge Base](https://wpextended.io
 
 == Changelog ==
 
-= 3.0.14 - 3 February 2025 =
-* Fix: Unauthorized modification of data due to a missing capability check on the reorder_route() function.
+= 3.0.15 - 10 March 2025 =
+Fixed: Cross Site Scripting (XSS) Vulnerability reported by Patchstack
+
+= 3.0.14 - 10 January 2025 =
+Fixed: Unauthorized modification of data due to a missing capability check on the reorder_route() function.
 
 = 3.0.13 - 10 January 2025 =
 * Fix: Login Attempts Module - Unauthenticated SQL Injection and sanitization and uses values.
@@ -209,7 +212,7 @@ For documentation and tutorials visit our [Knowledge Base](https://wpextended.io
 * Fix: Duplicate Menu - Error handling for themes that don’t support menus.
 
 = 3.0.5 - 19 July 2024 =
-* New: Modules list - Added Read documentation Icon/Text link for each module. 
+* New: Modules list - Added Read documentation Icon/Text link for each module.
 * Update: Code snippet - Added export/import for new Code snippet list. 
 * Update: Code snippet - Added deleted message notice. 
 * Update: SMTP module - Changed input box Column layout. 
@@ -310,7 +313,7 @@ For documentation and tutorials visit our [Knowledge Base](https://wpextended.io
 * Update: Duplicate Pages & Posts is now available for all post types
 * Update: Tidy up of modules dashboard UI
 * Bug: Menu Editor Disable Dashboard issue
-* Bug: Background color issue on Maintenance Mode  
+* Bug: Background color issue on Maintenance Mode
 
 = 2.4.2 - 9 August 2023 =
 
@@ -354,7 +357,7 @@ For documentation and tutorials visit our [Knowledge Base](https://wpextended.io
 = 2.1.3 - 14 April 2023 =
 
 * New: Hide admin bar: Admins can now choose which user role will display the Admin Bar when logged in
-* New: Disable Gutenberg Widgets: Reverting back to the Classic WordPress Widgets 
+* New: Disable Gutenberg Widgets: Reverting back to the Classic WordPress Widgets
 
 
 = 2.1.2 - 11 April 2023 =
@@ -405,7 +408,7 @@ For documentation and tutorials visit our [Knowledge Base](https://wpextended.io
 = 1.0.1 - 28 September 2022 =
 
 * NEW: SVG File Upload Module - Allowing users to now upload .svg files
-* FIX: Snippets - Updated to now include script tags without adding them automatically  
+* FIX: Snippets - Updated to now include script tags without adding them automatically
 
 = 1.0.0 - 26 September 2022 =
 
@@ -441,7 +444,7 @@ WP Extended includes a "Disable Gutenberg Editor" module, allowing you to switch
 
 The "Custom wp-admin URL" module allows you to change the URL of your wp-admin page. This adds an extra layer of security by hiding the default admin login URL from potential hackers.
 
-= What does the "Disable Blog" module do? = 
+= What does the "Disable Blog" module do? =
 
 The "Disable Blog" module is designed for websites that don't require a blog feature. By disabling blog-related functionalities, this module helps streamline your admin area.
 

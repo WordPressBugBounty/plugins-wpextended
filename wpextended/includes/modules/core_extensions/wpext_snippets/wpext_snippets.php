@@ -294,8 +294,17 @@ public function wpext_add_snippet_page() { ?>
                                         <div class="col-3">
                                             <h2 class="wpext_snippet_title">
                                                 <?php
-                                                    $selected_option = isset($_GET['selected_option']) ? sanitize_text_field($_GET['selected_option']) : '';
-                                                    echo esc_html($selected_option);
+                                                $allowed_types = array('PHP', 'CSS', 'HTML', 'JAVASCRIPT');
+                                                $selected_option = isset($_GET['selected_option']) ? sanitize_text_field($_GET['selected_option']) : '';
+
+                                                $selected_option = strtoupper($selected_option);
+ 
+                                                // Only allow values from our strict whitelist
+                                                if (!in_array($selected_option, $allowed_types, true)) {
+                                                    // Set a default fallback if not in allowed types
+                                                    $selected_option = 'PHP';
+                                                }
+                                                echo esc_html($selected_option);
                                                 ?>
                                             </h2>
                                             <?php self::wpext_custom_css_content($selected_option); ?>
