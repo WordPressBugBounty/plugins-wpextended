@@ -2,8 +2,8 @@
 Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
-Tested up to: 6.7.1
-Stable tag: 3.0.15
+Tested up to: 6.8.1
+Stable tag: 3.0.16
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,9 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.0.16 - 26 May 2025 =
+Fixed: Stored Cross-Site Scripting via SVG File Upload Module reported by Wordfence
 
 = 3.0.15 - 10 March 2025 =
 Fixed: Cross Site Scripting (XSS) Vulnerability reported by Patchstack
