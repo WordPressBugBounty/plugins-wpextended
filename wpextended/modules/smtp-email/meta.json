@@ -1,0 +1,13 @@
+{
+  "id": "smtp-email",
+  "name": "SMTP Email",
+  "description": "Reliably ensure the successful delivery of your emails with SMTP.",
+  "docs": "https://wpextended.io/docs/smtp-email/",
+  "keywords": ["smtp", "email"],
+  "group": "Developer Tools",
+  "pro": false,
+  "settings": true,
+  "migrations": {
+    "3.1.0": "Migration_3_1_0"
+  }
+}

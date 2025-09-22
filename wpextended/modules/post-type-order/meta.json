@@ -1,0 +1,19 @@
+{
+  "id": "post-type-order",
+  "name": "Post Type Order",
+  "description": "Customise the order of posts and pages, allowing for precise control over the display of your site's content.",
+  "keywords": [
+    "post",
+    "page",
+    "order",
+    "sort",
+    "custom",
+    "customise",
+    "customization",
+    "customise"
+  ],
+  "group": "Content Management",
+  "docs": "https://wpextended.io/docs/post-type-order/",
+  "pro": false,
+  "settings": true
+}

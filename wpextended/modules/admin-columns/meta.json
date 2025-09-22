@@ -1,0 +1,13 @@
+{
+  "id": "admin-columns",
+  "name": "Admin Columns",
+  "description": "Organise columns for posts, pages, media, comments and users.",
+  "docs": "https://wpextended.io/docs/admin-columns/",
+  "keywords": ["admin", "columns"],
+  "group": "Admin Tools",
+  "pro": true,
+  "settings": {
+    "free": false,
+    "pro": true
+  }
+}

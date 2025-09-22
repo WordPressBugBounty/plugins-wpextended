@@ -1,0 +1,19 @@
+{
+  "id": "pixel-tag-manager",
+  "name": "Pixel Tag Manager",
+  "description": "Easily manage and integrate various tracking pixels including Google Analytics, Facebook Pixel, and Pinterest Tag",
+  "keywords": [
+    "snippets",
+    "analytics",
+    "tracking",
+    "pixels",
+    "google-analytics",
+    "facebook-pixel",
+    "pinterest-tag"
+  ],
+  "group": "Developer Tools",
+  "docs": "https://wpextended.io/docs/pixel-tag-manager/",
+  "order": 11,
+  "settings": true,
+  "pro": false
+}

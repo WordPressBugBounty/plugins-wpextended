@@ -1,0 +1,12 @@
+{
+  "id": "indexing-notice",
+  "name": "Indexing Notice",
+  "description": "Displays an admin bar notice on the top right corner if the option to discourage search engines from indexing the site is enabled.",
+  "keywords": ["indexing", "notice", "admin bar"],
+  "group": "Performance & Control",
+  "available": true,
+  "docs": "https://wpextended.io/docs/indexing-notice/",
+  "order": 12,
+  "pro": false,
+  "settings": false
+}

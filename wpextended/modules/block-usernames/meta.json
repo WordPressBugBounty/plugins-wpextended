@@ -1,0 +1,13 @@
+{
+  "id": "block-usernames",
+  "name": "Block Usernames",
+  "description": "Prevent use of certain usernames, reducing the risk of targeted attacks",
+  "docs": "https://wpextended.io/docs/block-usernames/",
+  "keywords": ["username", "security"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": {
+    "free": false,
+    "pro": true
+  }
+}

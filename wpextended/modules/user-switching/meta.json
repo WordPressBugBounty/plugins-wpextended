@@ -1,0 +1,11 @@
+{
+  "name": "User Switching",
+  "id": "user-switching",
+  "description": "Enables swift switching between user accounts for easy role management and testing.",
+  "keywords": ["Media"],
+  "group": "Developer Tools",
+  "docs": "https://wpextended.io/docs/user-switching/",
+  "order": 27,
+  "settings": false,
+  "pro": false
+}

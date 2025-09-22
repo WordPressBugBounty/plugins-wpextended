@@ -1,0 +1,18 @@
+{
+  "name": "User Last Login",
+  "id": "user-last-login",
+  "description": "Display the last login timestamps of users, monitoring user activity and managing user accounts effectively.",
+  "keywords": [
+    "user activity",
+    "login tracking",
+    "user monitoring",
+    "security logs",
+    "user management",
+    "login history",
+    "user login"
+  ],
+  "group": "Security & Privacy",
+  "docs": "https://wpextended.io/docs/user-last-login/",
+  "settings": true,
+  "pro": false
+}

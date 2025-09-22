@@ -1,0 +1,10 @@
+{
+  "id": "rollback-manager",
+  "name": "Rollback Manager",
+  "description": "Revert to previous versions of any theme or plugin from WordPress.org",
+  "docs": "https://wpextended.io/docs/rollback-manager/",
+  "keywords": ["rollback", "theme", "plugin"],
+  "group": "Performance & Control",
+  "pro": false,
+  "settings": true
+}

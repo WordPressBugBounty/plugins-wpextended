@@ -1,0 +1,14 @@
+{
+  "name": "wpextended/wpextended",
+  "description": "WP Extended Pro - A comprehensive WordPress extension plugin",
+  "type": "wordpress-plugin",
+  "license": "proprietary",
+  "require": {},
+  "scripts": {
+    "validate:all": "sh scripts/wp-extended-validate.sh --all",
+    "validate:module": "sh scripts/wp-extended-validate.sh --module",
+    "validate:path": "sh scripts/wp-extended-validate.sh --path",
+    "validate:plugin": "sh scripts/wp-extended-validate.sh --entire-plugin",
+    "validate-dir": "sh scripts/wp-extended-validate.sh --path"
+  }
+}

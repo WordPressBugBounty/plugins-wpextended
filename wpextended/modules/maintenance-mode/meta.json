@@ -1,0 +1,10 @@
+{
+  "id": "maintenance-mode",
+  "name": "Maintenance Mode",
+  "description": "Switch your site to Maintenance Mode for updates or changes.",
+  "docs": "https://wpextended.io/docs/maintenance-mode/",
+  "keywords": ["disable", "updates"],
+  "group": "Performance & Control",
+  "pro": false,
+  "settings": true
+}

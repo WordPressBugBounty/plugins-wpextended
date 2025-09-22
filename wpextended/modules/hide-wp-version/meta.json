@@ -1,0 +1,10 @@
+{
+  "id": "hide-wp-version",
+  "name": "Hide WP version",
+  "description": "Hide WordPress version from your site’s source view, thwarting targeted attacks.",
+  "docs": "https://wpextended.io/docs/hide-wp-version/",
+  "keywords": ["wordpress", "version", "security"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": false
+}

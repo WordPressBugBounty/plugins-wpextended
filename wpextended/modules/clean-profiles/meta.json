@@ -1,0 +1,11 @@
+{
+  "id": "clean-profiles",
+  "name": "Clean Profiles",
+  "description": "Simplifies user profiles in admin area, removing unneeded fields for efficiency.",
+  "keywords": [],
+  "group": "Admin Tools",
+  "docs": "https://wpextended.io/docs/clean-profiles/",
+  "order": 23,
+  "settings": true,
+  "pro": false
+}

@@ -1,0 +1,14 @@
+{
+  "id": "limit-login-attempts",
+  "name": "Limit Login Attempts",
+  "description": "Prevent brute-force attacks by limiting the number of login attempts.",
+  "docs": "https://wpextended.io/docs/login-attempts/",
+  "keywords": ["login", "attempts", "brute-force", "security"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": true,
+  "pro_features": [
+    "Unblock blocked accounts manually",
+    "Advanced unblock management interface"
+  ]
+}

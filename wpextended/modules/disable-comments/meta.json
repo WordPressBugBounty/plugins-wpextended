@@ -1,0 +1,11 @@
+{
+  "name": "Disable Comments",
+  "id": "disable-comments",
+  "description": "Eliminate comment sections from your site, reducing spam and moderating efforts.",
+  "keywords": [""],
+  "group": "Performance & Control",
+  "docs": "https://wpextended.io/docs/disable-comments/",
+  "order": 33,
+  "settings": false,
+  "pro": true
+}

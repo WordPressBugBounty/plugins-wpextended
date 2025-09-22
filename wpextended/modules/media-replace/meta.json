@@ -1,0 +1,10 @@
+{
+  "id": "media-replace",
+  "name": "Media Replace",
+  "description": "Seamlessly replace an image or file in your Media Library by uploading a new file.",
+  "docs": "https://wpextended.io/docs/media-replace/",
+  "keywords": ["media", "replace", "placeholder"],
+  "group": "Media Tools",
+  "pro": true,
+  "settings": false
+}

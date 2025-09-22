@@ -1,0 +1,10 @@
+{
+  "name": "Export Users",
+  "id": "export-users",
+  "description": "Quickly export user data to multiple formats, aiding in backups and data portability.",
+  "docs": "https://wpextended.io/docs/export-users/",
+  "keywords": [],
+  "group": "Developer Tools",
+  "pro": false,
+  "settings": true
+}

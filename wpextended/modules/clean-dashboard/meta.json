@@ -1,0 +1,10 @@
+{
+  "name": "Clean Dashboard",
+  "id": "clean-dashboard",
+  "description": "Streamlines admin dashboard by hiding unwanted elements for a cleaner interface.",
+  "docs": "https://wpextended.io/docs/clean-dashboard/",
+  "keywords": [],
+  "group": "Admin Tools",
+  "settings": true,
+  "pro": true
+}

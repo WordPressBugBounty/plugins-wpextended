@@ -1,0 +1,13 @@
+{
+  "name": "Quick Add Post",
+  "id": "quick-add-post",
+  "description": "Add new posts quickly from the post edit screen, enhancing productivity and allowing for rapid content updates.",
+  "keywords": ["Posts"],
+  "group": "Admin Tools",
+  "docs": "https://wpextended.io/docs/quick-add-post/",
+  "settings": {
+    "free": false,
+    "pro": true
+  },
+  "pro": false
+}

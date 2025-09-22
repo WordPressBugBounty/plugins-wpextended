@@ -1,0 +1,10 @@
+{
+  "id": "custom-login-url",
+  "name": "Custom Login URL",
+  "description": "Customize your login URL to increase security by making it harder for unauthorised access.",
+  "docs": "https://wpextended.io/docs/custom-login-url/",
+  "keywords": ["security", "login", "url", "custom", "redirect"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": true
+}

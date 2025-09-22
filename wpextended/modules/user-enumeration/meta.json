@@ -1,0 +1,10 @@
+{
+  "id": "user-enumeration",
+  "name": "User Enumeration",
+  "description": "Secures against hackers scanning for usernames, blocking user enumeration attempts.",
+  "docs": "https://wpextended.io/docs/user-enumeration/",
+  "keywords": ["security", "user", "enumeration"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": false
+}

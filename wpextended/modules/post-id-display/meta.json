@@ -1,0 +1,10 @@
+{
+  "name": "Post ID Display",
+  "id": "post-id-display",
+  "description": "Display the ID of the post in the post list row actions.",
+  "keywords": ["Posts", "Show Post ID"],
+  "group": "Content Management",
+  "docs": "https://wpextended.io/docs/post-id-display/",
+  "settings": true,
+  "pro": true
+}

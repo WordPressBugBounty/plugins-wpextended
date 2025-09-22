@@ -3,7 +3,7 @@ Contributors: wpextended
 Tags: export posts pages, export users, duplicate pages posts, insert snippets, hide admin notices, media trash, clean profiles, svg upload, post type switcher, limit login attempts, maintenance mode
 Requires at least: 5.6
 Tested up to: 6.8.1
-Stable tag: 3.0.16
+Stable tag: 3.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,81 @@ https://www.youtube.com/watch?v=yvc4XgB2pg0
 For documentation and tutorials visit our [Knowledge Base](https://wpextended.io/docs/).
 
 == Changelog ==
+
+= 3.1.0 - 22 September 2025 =
+New: Global: Brand new plugin UI and interface
+New: Global: Migration script to upgrade from < 3.1.0 to > 3.1.0
+New: Code Snippets: Security integrity hash added for snippets
+New: Code Snippets: HTML added as a snippet type
+New: Code Snippets: ‘Where to run’ option added for all snippets
+New: Duplicate Posts & Pages: Native Block Editor support for duplication
+New: Duplicate Posts & Pages: Per post type controls for duplication
+New: Duplicate Posts & Pages: Customisable duplicated post title
+New: Export Posts: Field and meta field selection options for post export
+New: Export Users: Field and meta field selection options for user export
+New: Admin Customiser: Login page form controls added
+New: Admin Customiser: Login page input controls added
+New: Admin Customiser: Login page form options added
+New: Admin Customiser: Login page support for custom message
+New: Maintenance Mode: Headline text and controls
+New: Maintenance Mode: Body text and controls
+New: Maintenance Mode: Footer text and controls
+New: Post Type Switcher: Native Block Editor support
+New: Post Type Switcher: Enable per post type option
+New: Quick Add Post: Native Block Editor support
+New: Quick Add Post: Enable per post type option
+New: Quick Image: Enable per post type option
+New: User Switching: Default user option for quick switching from admin bar
+New: Hide Admin Notices: Global notification display setting
+New: Hide Admin Notices: Per user role notice display
+New: Link Manager: Custom classes for modified external links
+New: Link Manager: Option to disable speculative loading
+New: Limit Login Attempts: Option to block usernames from Block Usernames module
+New: Limit Login Attempts: Admin notification when user is blocked
+New: Custom Login URL: Additional redirect types
+New: Disable Auto Updates: Core update controls added
+New: Disable Auto Updates: Plugin update controls added
+New: Disable Auto Updates: Theme update controls added
+New: Disable Auto Updates: Translation update controls added
+New: Export Posts: JSON and TXT export formats
+New: Export Users: JSON and TXT export formats
+New: Post Type Order: Success/error notification added
+New: Post Type Switcher: Success/error notification added
+New: Quick Add Post: Success/error notification added
+New: Quick Image: Success/error notification added
+New: Export Posts: Success/error notification added
+New: Export Users: Success/error notification added
+New: Duplicate Posts & Pages: Redirect to post screen after duplication
+New: Duplicate Posts & Pages: Post status selection for duplicated items
+New: Duplicate Posts & Pages: Success/error notification added
+New: Global: Export options for global and module settings
+New: Global: Toggle to enable development updates
+New: Global: Toggle to enable all submodules
+New: Global: Reset button added to all modules
+New: External Permalinks: Native Block Editor support
+New: Hide Author Slugs: Notice if used alongside User Enumeration module
+New: Hide Admin Notices: Hidden tray notice type
+New: Clean Profiles: Option to disable specific profile fields
+New: Block Usernames: Toggle to block common usernames
+New: Clean Dashboard: Toggle to disable all widgets
+New: Menu Editor: Support for submenu items
+New: Post ID Display: New module to show post ID in post list row actions
+New: Media Replace: Check added for matching file types
+New: Link Manager: Option to disable external arrow icon
+New: SMTP Email: Log retention setting added
+New: User Last Login: Date format option for relative/custom time
+New: Admin Customiser: Admin bar dropdown background colour setting
+New: Admin Customiser: Additional admin bar element options
+Improvement: Global: Refactored UI for consistent design across all modules
+Improvement: Code Snippets: Switched to file-based storage instead of database
+Improvement: Code Snippets: Migrated both old and new snippet formats to new system
+Improvement: Maintenance Mode: Improved default custom layouts
+Improvement: Media Replace: Enhanced UI in media library
+Improvement: Link Manager: Merged “Open in new tab” feature into Link Manager
+Improvement: Post Type Order: Better handling of post movement
+Improvement: Post Type Order: Access control checks for moving posts
+Improvement: SVG Upload: Improved SVG sanitisation and handling
+Fixed: Disable XML-RPC: Resolved issue where XML-RPC wasn’t always disabled
 
 = 3.0.16 - 26 May 2025 =
 Fixed: Stored Cross-Site Scripting via SVG File Upload Module reported by Wordfence
@@ -379,7 +454,7 @@ Fixed: Unauthorized modification of data due to a missing capability check on th
 
 = 2.1.0 - 16 March 2023 =
 
-* NEW: Limit Login Attempts Module
+* New: Limit Login Attempts Module
 * UPDATE: Minor UI amends
 * FIXED: Core modules table layout issue
 
@@ -390,18 +465,18 @@ Fixed: Unauthorized modification of data due to a missing capability check on th
 
 = 1.2.0 - 20 February 2023 =
 
-* NEW: Post Type Switcher Module
+* New: Post Type Switcher Module
 * UPDATE: Minor UI updates
 
 = 1.1.1 - 28 October 2022 =
 
-* NEW: User feedback upon deactivation
+* New: User feedback upon deactivation
 * UPDATE: Minor UI updates
 
 = 1.1.0 - 17 October 2022 =
 
-* NEW: Tidy Nav Module – Tidy up nav menu for user roles for security and aesthetics
-* NEW: Disable Gutenberg Editor for 'Page' post type
+* New: Tidy Nav Module – Tidy up nav menu for user roles for security and aesthetics
+* New: Disable Gutenberg Editor for 'Page' post type
 * UPDATE: Change nav label to 'Modules' for easier navigation
 
 = 1.0.2 - 28 September 2022 =
@@ -410,7 +485,7 @@ Fixed: Unauthorized modification of data due to a missing capability check on th
 
 = 1.0.1 - 28 September 2022 =
 
-* NEW: SVG File Upload Module - Allowing users to now upload .svg files
+* New: SVG File Upload Module - Allowing users to now upload .svg files
 * FIX: Snippets - Updated to now include script tags without adding them automatically
 
 = 1.0.0 - 26 September 2022 =

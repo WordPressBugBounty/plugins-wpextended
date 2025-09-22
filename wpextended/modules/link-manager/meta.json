@@ -1,0 +1,18 @@
+{
+  "id": "link-manager",
+  "name": "Link Manager",
+  "description": "Manage external links and WordPress link behavior. Control external link behavior and WordPress 6.8+ pre-link loading.",
+  "docs": "https://wpextended.io/docs/link-manager/",
+  "keywords": [
+    "links",
+    "external",
+    "manager",
+    "preload",
+    "open in new tab",
+    "target",
+    "blank"
+  ],
+  "group": "Performance & Control",
+  "pro": false,
+  "settings": true
+}

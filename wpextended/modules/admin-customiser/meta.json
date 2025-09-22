@@ -1,0 +1,11 @@
+{
+  "id": "admin-customiser",
+  "name": "Admin Customiser",
+  "description": "Customise the WordPress admin area",
+  "version": "1.0.0",
+  "docs": "https://wpextended.io/docs/admin-customiser/",
+  "keywords": ["admin", "customiser", "colours", "colors"],
+  "group": "Admin Tools",
+  "pro": true,
+  "settings": true
+}

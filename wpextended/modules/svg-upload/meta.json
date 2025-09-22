@@ -1,0 +1,10 @@
+{
+  "id": "svg-upload",
+  "name": "SVG File Upload",
+  "description": "Allow SVG file uploads",
+  "docs": "https://wpextended.io/docs/svg-file-upload/",
+  "keywords": ["svg", "upload", "media"],
+  "group": "Media Tools",
+  "pro": false,
+  "settings": false
+}

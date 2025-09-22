@@ -1,0 +1,21 @@
+{
+  "id": "menu-editor",
+  "name": "Menu Editor",
+  "description": "Customise your admin menus, including reordering, hiding, or renaming menu items.",
+  "keywords": [
+    "admin",
+    "menu",
+    "navigation",
+    "customize",
+    "reorder",
+    "hide",
+    "rename",
+    "dashboard",
+    "sidebar",
+    "interface"
+  ],
+  "group": "Admin Tools",
+  "docs": "https://wpextended.io/docs/menu-editor/",
+  "settings": true,
+  "pro": false
+}

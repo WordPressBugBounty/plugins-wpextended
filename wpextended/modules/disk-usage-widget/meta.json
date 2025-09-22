@@ -1,0 +1,19 @@
+{
+  "id": "disk-usage-widget",
+  "name": "Disk Usage Widget",
+  "description": "Adds a widget to your WordPress dashboard display disk usage statistics.",
+  "keywords": [
+    "disk",
+    "storage",
+    "usage",
+    "widget",
+    "dashboard",
+    "statistics",
+    "monitoring"
+  ],
+  "group": "Admin Tools",
+  "docs": "https://wpextended.io/docs/disk-usage-widget/",
+  "order": 15,
+  "settings": false,
+  "pro": false
+}

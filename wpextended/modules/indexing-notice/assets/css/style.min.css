@@ -1,0 +1,3 @@
+#wp-admin-bar-wpext-indexing-notice a{color:#fff!important;background:#e0281f!important;transition:.1s ease-in-out}#wp-admin-bar-wpext-indexing-notice a:focus,#wp-admin-bar-wpext-indexing-notice a:hover{text-decoration:underline;background:#bd2b24!important}#wp-admin-bar-wpext-indexing-notice:has(
++ #wp-admin-bar-wpext-maintenance-mode
+){margin-right:3px}

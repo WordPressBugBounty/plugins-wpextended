@@ -1,0 +1,11 @@
+{
+  "id": "quick-image",
+  "name": "Quick Image",
+  "description": "Quickly and easily replace featured images in the post/page list",
+  "keywords": ["featured image", "replace", "column", "change"],
+  "group": "Content Management",
+  "docs": "https://wpextended.io/docs/quick-image/",
+  "order": 30,
+  "settings": true,
+  "pro": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "quick-search",
+  "name": "Quick Search",
+  "description": "The easy way to navigate around your WordPress website.",
+  "docs": "https://wpextended.io/docs/wp-admin-quick-search/",
+  "keywords": ["search", "quick"],
+  "group": "Admin Tools",
+  "pro": true,
+  "settings": false
+}

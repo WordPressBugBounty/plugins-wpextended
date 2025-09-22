@@ -1,0 +1,10 @@
+{
+  "name": "External Permalinks",
+  "id": "external-permalinks",
+  "description": "Custom permalinks for external websites for better URL management.",
+  "docs": "https://wpextended.io/docs/external-permalinks/",
+  "keywords": [],
+  "group": "Content Management",
+  "pro": false,
+  "settings": true
+}

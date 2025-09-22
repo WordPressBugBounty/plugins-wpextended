@@ -1,0 +1,13 @@
+{
+  "name": "Hide Admin Notices",
+  "id": "hide-admin-notices",
+  "description": "Hide unnecessary admin notices, allowing for a more focused and efficient admin experience.",
+  "docs": "https://wpextended.io/docs/hide-admin-notices/",
+  "keywords": [],
+  "group": "Admin Tools",
+  "pro": true,
+  "settings": {
+    "free": false,
+    "pro": true
+  }
+}

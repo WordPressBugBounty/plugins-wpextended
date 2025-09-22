@@ -1,0 +1,13 @@
+{
+  "id": "hide-admin-bar",
+  "name": "Hide Admin Bar",
+  "description": "Keep the admin bar hidden for specific user roles or on specific pages.",
+  "docs": "https://wpextended.io/docs/hide-admin-bar/",
+  "keywords": ["admin", "bar", "hide"],
+  "group": "Admin Tools",
+  "migrations": {
+    "3.1.0": "Migration_3_1_0"
+  },
+  "pro": false,
+  "settings": true
+}

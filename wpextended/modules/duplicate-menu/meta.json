@@ -1,0 +1,10 @@
+{
+  "id": "duplicate-menu",
+  "name": "Duplicate Menu",
+  "description": "Seamlessly clone your WordPress Menus in just a couple of clicks.",
+  "docs": "https://wpextended.io/docs/duplicate-menu/",
+  "keywords": ["duplicate", "menu"],
+  "group": "Content Management",
+  "pro": false,
+  "settings": true
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Menu Visibility",
+  "id": "menu-visibility",
+  "description": "Tailor menu visibility by user role, enhancing navigation and site security.",
+  "keywords": [],
+  "group": "Admin Tools",
+  "docs": "https://wpextended.io/docs/menu-visibility/",
+  "order": 30,
+  "settings": false,
+  "pro": false
+}

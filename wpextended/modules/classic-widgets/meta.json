@@ -1,0 +1,10 @@
+{
+  "id": "classic-widgets",
+  "name": "Classic Widgets",
+  "description": "Switch back to the classic WordPress widgets if preferred, offering a simpler content interface.",
+  "docs": "https://wpextended.io/docs/classic-widgets/",
+  "keywords": ["gutenberg", "block editor", "widgets"],
+  "group": "Content Management",
+  "pro": false,
+  "settings": false
+}

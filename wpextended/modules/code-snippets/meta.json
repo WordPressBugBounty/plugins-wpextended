@@ -1,0 +1,10 @@
+{
+  "id": "code-snippets",
+  "name": "Code Snippets",
+  "description": "Insert PHP, HTML, CSS or JS code snippets to the website header or footer.",
+  "docs": "https://wpextended.io/docs/code-snippets/",
+  "keywords": ["snippets", "code"],
+  "group": "Developer Tools",
+  "settings": true,
+  "pro": false
+}

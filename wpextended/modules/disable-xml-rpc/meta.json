@@ -1,0 +1,10 @@
+{
+  "id": "disable-xml-rpc",
+  "name": "Disable XML-RPC",
+  "description": "Increase security by disabling XML-RPC to prevent external applications from interfacing with your WordPress site, reducing vulnerability to attacks.",
+  "docs": "https://wpextended.io/docs/disabling-xml-rpc/",
+  "keywords": ["xml-rpc", "security"],
+  "group": "Security & Privacy",
+  "pro": false,
+  "settings": false
+}

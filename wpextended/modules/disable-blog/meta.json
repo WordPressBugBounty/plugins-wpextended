@@ -1,0 +1,10 @@
+{
+  "id": "disable-blog",
+  "name": "Disable Blog",
+  "description": "Transform your site into a non-blogging platform by disabling blog-related features.",
+  "docs": "https://wpextended.io/docs/disable-blog/",
+  "keywords": ["blog", "disable", "media"],
+  "group": "Performance & Control",
+  "pro": true,
+  "settings": false
+}

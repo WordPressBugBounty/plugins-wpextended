@@ -1,0 +1,10 @@
+{
+  "id": "media-trash",
+  "name": "Media Trash",
+  "description": "Enable the Trash facility when deleting media files",
+  "keywords": [""],
+  "group": "Media Tools",
+  "docs": "https://wpextended.io/docs/media-trash/",
+  "settings": false,
+  "pro": true
+}

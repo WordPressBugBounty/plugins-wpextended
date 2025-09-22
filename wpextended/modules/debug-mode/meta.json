@@ -1,0 +1,10 @@
+{
+  "id": "debug-mode",
+  "name": "Debug Mode",
+  "description": "Enable Debug Mode to easily troubleshoot and resolve issues, providing detailed error logs and warnings for developers.",
+  "docs": "https://wpextended.io/docs/debug-mode/",
+  "keywords": ["debug", "mode"],
+  "group": "Developer Tools",
+  "pro": true,
+  "settings": false
+}

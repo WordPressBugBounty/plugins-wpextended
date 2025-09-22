@@ -1,0 +1,10 @@
+{
+  "id": "disable-auto-updates",
+  "name": "Disable Auto Updates",
+  "description": "Gain full control over your site by manually managing updates, ensuring compatibility before applying new changes.",
+  "docs": "https://wpextended.io/docs/disable-auto-updates/",
+  "keywords": ["disable", "updates"],
+  "group": "Performance & Control",
+  "pro": true,
+  "settings": true
+}
